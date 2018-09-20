@@ -58,10 +58,11 @@ for(k in 1:10){
 ########################################################### Task 4
 
 # 請寫一段程式碼，能判斷輸入之西元年分 year 是否為閏年
+year <-readline("input year: ")
+year<- as.numeric(year)
 
-year <- readline()
-if(year%%4==0){
-  print(year,"是閏年\n")
+if(year%%400==0 | ( year%%4==0 &year%%100!=0 )) {
+  cat(year,"是閏年\n")
 }else{
-  print(year,"是平年\n")
+  cat(year,"是平年\n")
 }

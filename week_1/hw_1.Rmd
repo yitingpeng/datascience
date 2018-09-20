@@ -77,11 +77,12 @@ for(k in 1:10){
 
 ## 4
 
-：
+判斷閏年：
 
 ```{r year}
 # 請寫一段程式碼，能判斷輸入之西元年分 year 是否為閏年
 year <-readline("input year: ")
+year <-1968
 year<- as.numeric(year)
 
 if(year%%400==0 | ( year%%4==0 &year%%100!=0 )) {
