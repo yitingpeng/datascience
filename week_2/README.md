@@ -1,5 +1,3 @@
-# datascience
-
-- week2
+# Datascience_week_2
 
 
