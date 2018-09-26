@@ -2,20 +2,28 @@
 #### B04303008 彭翊庭
 ***
 
-1. WEEK1
+1. WEEK1：
+    
+    ```
+    建立github帳號以及R練習
+    ```
+    
+    - PRACTICE
 
-  - PRACTICE
+    - [HW_1](https://yitingpeng.github.io/datascience/week_1/hw_1.html)
 
-  - [HW_1](https://yitingpeng.github.io/datascience/week_1/hw_1.html)
+    - HW_1_BONUS(UNFINISED)
 
-  - HW_1_BONUS(UNFINISED)
+2. WEEK2：
+    
+    ```
+    爬蟲練習
+    ```
 
-2. WEEK2
+    * PRACTICE
 
-  * PRACTICE
+    * HW_2
 
-  * HW_2
-
-  * HW_2_BONUS
+    * HW_2_BONUS
 
 
