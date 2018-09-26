@@ -4,9 +4,7 @@
 
 1. Week1：
     
-    ```
-    建立github帳號以及R練習
-    ```
+    ```建立github帳號以及R練習```
     
     - Practice
 
@@ -16,9 +14,7 @@
 
 2. Week2：
     
-    ```
-    爬蟲練習
-    ```
+    ```爬蟲練習```
 
     * [Practice](https://yitingpeng.github.io/datascience/week_2/practice_week2/practice_week2.html	)
 
