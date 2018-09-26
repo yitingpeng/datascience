@@ -136,7 +136,7 @@ url &lt;-&quot;https:/ecshweb.pchome.com.tw/search/v3.3/all/results?q=Microsoft%
 res &lt;- GET(url)
 res</code></pre>
 <pre><code>## Response [https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=Microsoft%20surface&amp;page=1&amp;sort=rnk/dc]
-##   Date: 2018-09-26 08:23
+##   Date: 2018-09-26 09:32
 ##   Status: 200
 ##   Content-Type: application/json
 ##   Size: 34 kB</code></pre>
@@ -1323,6 +1323,134 @@ res_json</code></pre>
 ## [18,] List,0      &quot;ec&quot;
 ## [19,] List,0      &quot;ec&quot;
 ## [20,] List,0      &quot;ec&quot;</code></pre>
+<pre class="r"><code>df&lt;-data.frame(do.call(rbind,res_json$prods))
+df</code></pre>
+<pre><code>##                  Id cateId                                         picS
+## 1  DHAY19-19009DEHG DHAY2N /items/DHAY1919009DEHG/000002_1535707055.jpg
+## 2  DHAY2N-A9009ARUE DHAY2N /items/DHAY2NA9009ARUE/000002_1533805518.jpg
+## 3  DHAY1W-190098UL5 DHAY1W /items/DHAY1W190098UL5/000002_1532421526.jpg
+## 4  DHAY1W-A90097I4B DHAY1W /items/DHAY1WA90097I4B/000002_1531969708.jpg
+## 5  DHAY1W-190099I6G DHAY1W /items/DHAY1W190099I6G/000002_1532941766.jpg
+## 6  DHAY1W-A90092MOR DHAY1W /items/DHAY1WA90092MOR/000002_1528196321.jpg
+## 7  DHAY1W-A90090ZTF DHAY1Q /items/DHAY1WA90090ZTF/000002_1526289147.jpg
+## 8  DHAY1W-A9008VIR3 DHAY1W /items/DHAY1WA9008VIR3/000002_1522721258.jpg
+## 9  DHAY1W-A9008PNUT DHAY1W /items/DHAY1WA9008PNUT/000002_1531885836.jpg
+## 10 DHAY1X-A9008RJU6 DHAY2H /items/DHAY1XA9008RJU6/000002_1517997905.jpg
+## 11 DHAY0X-A9009AGEE DHAY2O /items/DHAY0XA9009AGEE/000002_1533806249.jpg
+## 12 DHAY0W-A9007TY1V DHAY0W /items/DHAY0WA9007TY1V/000002_1484795826.jpg
+## 13 QAAH53-A90099UKH QAAH53 /items/QAAH53A90099UKH/000002_1533176717.jpg
+## 14 DHAY0X-19008J99R DHAY0X /items/DHAY0X19008J99R/000002_1510319860.jpg
+## 15 DHAY1X-A9008RJU7 DHAY2H /items/DHAY1XA9008RJU7/000002_1517997872.jpg
+## 16 DHAY0X-A9009AGGC DHAY2O /items/DHAY0XA9009AGGC/000002_1533806023.jpg
+## 17 DHAY1W-19008WP4U DHAY1W /items/DHAY1W19008WP4U/000002_1525241860.jpg
+## 18 DHAY29-A9008UGFY DHAY2B /items/DHAY29A9008UGFY/000002_1520933652.jpg
+## 19 DHAY1X-A9008RJS4 DHAY2H /items/DHAY1XA9008RJS4/000002_1517997927.jpg
+## 20 DHAY1W-A9008PNT3 DHAY1W /items/DHAY1WA9008PNT3/000002_1527476149.jpg
+##                                            picB
+## 1  /items/DHAY1919009DEHG/000001_1536645378.jpg
+## 2  /items/DHAY2NA9009ARUE/000001_1533805842.jpg
+## 3  /items/DHAY1W190098UL5/000001_1537840981.jpg
+## 4  /items/DHAY1WA90097I4B/000001_1537329974.jpg
+## 5  /items/DHAY1W190099I6G/000001_1537928809.jpg
+## 6  /items/DHAY1WA90092MOR/000001_1537329954.jpg
+## 7  /items/DHAY1WA90090ZTF/000001_1537330836.jpg
+## 8  /items/DHAY1WA9008VIR3/000001_1537330823.jpg
+## 9  /items/DHAY1WA9008PNUT/000001_1537330906.jpg
+## 10 /items/DHAY1XA9008RJU6/000001_1517997905.jpg
+## 11 /items/DHAY0XA9009AGEE/000001_1533806249.jpg
+## 12 /items/DHAY0WA9007TY1V/000001_1484893043.jpg
+## 13 /items/QAAH53A90099UKH/000001_1533176717.jpg
+## 14 /items/DHAY0X19008J99R/000001_1510319860.jpg
+## 15 /items/DHAY1XA9008RJU7/000001_1517997872.jpg
+## 16 /items/DHAY0XA9009AGGC/000001_1533806023.jpg
+## 17 /items/DHAY1W19008WP4U/000001_1525241860.jpg
+## 18 /items/DHAY29A9008UGFY/000001_1520933652.jpg
+## 19 /items/DHAY1XA9008RJS4/000001_1517997927.jpg
+## 20 /items/DHAY1WA9008PNT3/000001_1537330916.jpg
+##                                                                                 name
+## 1           Microsoft 微軟Surface Go MHN-00011(Pentium 黃金級處理器4415Y/4G/64G/W10)
+## 2          Microsoft 微軟Surface Go MCZ-00011(Pentium 黃金級處理器4415Y/8G/128G/W10)
+## 3                          Microsoft 微軟Surface Pro HGH-00019(Core i5/4G/128G/W10P)
+## 4                          Microsoft 微軟Surface Pro KLJ-00010(Core i5/8G/256G/W10P)
+## 5                          Microsoft 微軟Surface Pro KLJ-00010(Core i5/8G/256G/W10P)
+## 6     Microsoft 微軟Surface Pro 五週年限量精選組(Core i5/4G/128G/W10P/擴充基座/鍵盤)
+## 7                  ◤福利品◢Microsoft 微軟Surface Pro HGH-00019(Core i5/4G/128G/W10P)
+## 8                          Microsoft 微軟Surface Pro HGH-00019(Core i5/4G/128G/W10P)
+## 9                          Microsoft 微軟Surface Pro FJZ-00011(Core i7/8G/256G/W10P)
+## 10  Microsoft 微軟Surface Book2 HN4-00013(i7-8650U/8G/256G PCIe SSD/GTX1050-2G/W10P)
+## 11                                       Microsoft 微軟Surface Go 鍵盤_黑(KCM-00018)
+## 12                       Microsoft 微軟Surface Pro 4 CR5-00010(Core i5/4G/128G/W10P)
+## 13    Microsoft 微軟 New Surface Pro HGH-00019 (Core i5/4G/128G/W10P) 附原廠黑色鍵盤
+## 14                                       Microsoft 微軟Surface 擴充基座v4(PD9-00001)
+## 15 Microsoft 微軟Surface Book2 HNL-00013(i7-8650U/16G/512G PCIe SSD/GTX1050-2G/W10P)
+## 16                                     Microsoft 微軟Surface Go 鍵盤_白金(KCS-00018)
+## 17            Microsoft 微軟Surface Pro FJT-00011+終身版office(Core i5/4G/128G/W10P)
+## 18         Microsoft 微軟 Surface Studio 43Q-00015(Core i7/32GB/2TB/GTX980M-4G/W10P)
+## 19  Microsoft 微軟Surface Book2 HNN-00013(i7-8650U/16G/1TB PCIe SSD/GTX1050-2G/W10P)
+## 20                        Microsoft 微軟Surface Pro FKH-00011(Core i7/16G/512G/W10P)
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              describe
+## 1                                                                                                                                                                      Microsoft 微軟Surface Go MHN-00011Pentium 黃金級處理器4415Y/4G/64G/W10\\r\\n※隨身型動力，surface最輕巧代表作※\r\n※重量只有522克，平板也是筆電※\r\n※專為瀏覽 書寫 創作而生※\r\n※多功模式 隨心所欲※\r\n※快速、有效率，還有充足的不插電電力※\r\n\r\n■處理器：pentium 黃金級處理器4415y\r\n■記憶體：4gb ram\r\n■硬  碟：64gb emmc\r\n■顯示器：10吋 (1800x1200)觸控螢幕\r\n■重  量：單機身522g\r\n■作業系統：s模式的windows 10\r\n■軟體：office 365家用版30天試用\r\n■保固：一年有限硬體保固瑕疵擔保\r\n\r\n9月刷卡優惠限量需登錄\t\t\t\t\t\t\t\t\r\n↑銀行送1400詳情請點圖片了解\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n館長小叮嚀：先儲值再購物超划算～\t\t\t\t\t\t\t\t\r\n【9月儲值天天返利超有感】刷指定卡購買pchome儲值金\t\t\t\t\t\t\t\t\r\n→最高返利 1400 刷卡金 (限量，限1期)↑儲值返利1400詳情請點圖片了解\t\r\n\r\n\r\n加購office優惠\t\t\t\t\t\t\t\t\r\n↑買nb加購office 詳細請點\r\n\r\n\r\n本商品詳細規格
+## 2                                                                                                                                                                                                                                                                                                         Microsoft 微軟Surface Go MCZ-00011Pentium 黃金級處理器4415Y/8G/128G/W10\\r\\n※隨身型動力，surface最輕巧代表作※\r\n※重量只有522克，平板也是筆電※\r\n※專為瀏覽 書寫 創作而生※\r\n※多功模式 隨心所欲※\r\n※快速、有效率，還有充足的不插電電力※\r\n\r\n處理器：pentium 黃金級處理器4415y\r\n記憶體：8gb ram\r\n硬  碟：128gb ssd\r\n顯示器：10吋 (1800x1200)觸控螢幕\r\n重  量：單機身522g\r\n作業系統:s模式的windows 10\r\n軟體:office 365家用版30天試用\r\n保固：一年有限硬體保固瑕疵擔保\r\n\r\n★surface go 4g 64g&lt;U+25BA&gt;點此前往\r\n★surface go 鍵盤_白金&lt;U+25BA&gt;點此前往\r\n★surface go 鍵盤_酒紅&lt;U+25BA&gt;點此前往\r\n★surface go 鍵盤_鈷藍&lt;U+25BA&gt;點此前往\r\n★surface go 鍵盤_黑&lt;U+25BA&gt;點此前往\r\n\r\n注意:新機不包含手寫筆跟鍵盤，本賣場手寫筆跟鍵盤圖片僅供參考，謝謝
+## 3                                                                                                    ▼新鮮人攻略▼▼送實體鍵盤+office(共市值6680)▼Microsoft 微軟Surface Pro HGH-00019(Core i5/4G/128G/W10P)\\r\\n★學習、工作、娛樂、隨處滿足 \r\n★續航力較前一代提升50%\r\n★效能進化2.5倍\r\n★安靜、無風扇式冷卻系統\r\n\r\n處理器：第7代intel core i5\r\n記憶體：4gb ram\r\n硬  碟：128gb ssd\r\n顯示器：12.3吋 (2736x1821)觸控螢幕\r\n重  量：單機身770g\r\n作業系統:windows 10 pro\r\n軟體:office30天試用版\r\n保固：一年有限硬體保固瑕疵擔保\r\n\r\n\r\n9月刷卡優惠限量需登錄\t\t\t\t\t\t\t\t\r\n↑銀行送1400詳情請點圖片了解\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n館長小叮嚀：先儲值再購物超划算～\t\t\t\t\t\t\t\t\r\n【9月儲值天天返利超有感】刷指定卡購買pchome儲值金\t\t\t\t\t\t\t\t\r\n→最高返利 1400 刷卡金 (限量，限1期)↑儲值返利1400詳情請點圖片了解\t\r\n\r\n加購office優惠\t\t\t\t\t\t\t\t\r\n↑買nb加購office 詳細請點\r\n\r\n本商品詳細規格\r\n\r\n注意:新機不包含手寫筆，本賣場手寫筆圖片僅供參考，謝謝\r\n注意:鍵盤出貨時已包在主機裡面，故明細不會帶出贈品鍵盤，謝謝
+## 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ▼送白金鍵盤(市價5490)+office 365(市價2190)▼Microsoft 微軟Surface Pro KLJ-000109(Core i5/8G/256G/W10P)\\r\\n★學習、工作、娛樂、隨處滿足 \r\n★續航力較前一代提升50%\r\n★效能進化2.5倍\r\n★安靜、無風扇式冷卻系統\r\n\r\n處理器：第7代intel core i5\r\n記憶體：8gb ram\r\n硬  碟：256gb ssd\r\n顯示器：12.3吋 (2736x1821)觸控螢幕\r\n重  量：單機身770g\r\n作業系統:windows 10 pro\r\n軟體:office30天試用版\r\n保固：一年有限硬體保固瑕疵擔保\r\n\r\n注意:新機不包含手寫筆，本賣場手寫筆圖片僅供參考，謝謝\r\n注意:鍵盤已含在主機裡面，故贈品不會帶出，謝謝
+## 5                                                                                                                                                                                                                                                                                           ▼送白金鍵盤(市價5490)+office 365(市價2190)▼Microsoft 微軟Surface Pro KLJ-000109(Core i5/8G/256G/W10P)\\r\\n★學習、工作、娛樂、隨處滿足 \r\n★續航力較前一代提升50%\r\n★效能進化2.5倍\r\n★安靜、無風扇式冷卻系統\r\n\r\n處理器：第7代intel core i5\r\n記憶體：8gb ram\r\n硬  碟：256gb ssd\r\n顯示器：12.3吋 (2736x1821)觸控螢幕\r\n重  量：單機身770g\r\n作業系統:windows 10 pro\r\n軟體:office30天試用版\r\n保固：一年有限硬體保固瑕疵擔保\r\n\r\n9月刷卡優惠限量需登錄\r\n↑銀行送1400詳情請點圖片了解\r\n\r\n館長小叮嚀：先儲值再購物超划算～\r\n【9月儲值天天返利超有感】刷指定卡購買pchome儲值金\r\n→最高返利 1400 刷卡金 (限量，限1期)↑儲值返利1400詳情請點圖片了解\r\n\r\n\r\n注意:新機不包含手寫筆，本賣場手寫筆圖片僅供參考，謝謝\r\n注意:鍵盤已含在主機裡面，故贈品不會帶出，謝謝
+## 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ▼送實體鍵盤+office+擴充基座(共市價12170)▼Microsoft 微軟Surface Pro FJT-00011-PC(Core i5/4G/128G/W10P)\\r\\n★學習、工作、娛樂、隨處滿足 \r\n★續航力較前一代提升50%\r\n★效能進化2.5倍\r\n★安靜、無風扇式冷卻系統\r\n\r\n處理器：第7代intel core i5\r\n記憶體：4gb ram\r\n硬  碟：128gb ssd\r\n顯示器：12.3吋 (2736x1821)觸控螢幕\r\n重  量：單機身770g\r\n作業系統:windows 10 pro\r\n軟體:office30天試用版\r\n保固：一年有限硬體保固瑕疵擔保\r\n\r\n注意:新機不包含手寫筆，本賣場手寫筆圖片僅供參考，謝謝\r\n注意:鍵盤+擴充基座已含在主機裡面，故贈品不會帶出，謝謝
+## 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ▼Surface福利品現折大放送▼Microsoft 微軟Surface Pro HGH-00019(Core i5/4G/128G/W10P)\\r\\n★學習、工作、娛樂、隨處滿足 \r\n★續航力較前一代提升50%\r\n★效能進化2.5倍\r\n★安靜、無風扇式冷卻系統\r\n\r\n處理器：第7代intel core i5\r\n記憶體：4gb ram\r\n硬  碟：128gb ssd\r\n顯示器：12.3吋 (2736x1821)觸控螢幕\r\n重  量：單機身770g\r\n作業系統:windows 10 pro\r\n軟體:office30天試用版\r\n保固：一年有限硬體保固瑕疵擔保\r\n\r\n注意:新機不包含手寫筆，本賣場手寫筆圖片僅供參考，謝謝\r\n注意:鍵盤已含在主機裡面，故贈品不會帶出，謝謝
+## 8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ▼送實體鍵盤(市價4490)+Office▼Microsoft 微軟Surface Pro HGH-00019(Core i5/4G/128G/W10P)\\r\\n★學習、工作、娛樂、隨處滿足 \r\n★續航力較前一代提升50%\r\n★效能進化2.5倍\r\n★安靜、無風扇式冷卻系統\r\n\r\n處理器：第7代intel core i5\r\n記憶體：4gb ram\r\n硬  碟：128gb ssd\r\n顯示器：12.3吋 (2736x1821)觸控螢幕\r\n重  量：單機身770g\r\n作業系統:windows 10 pro\r\n軟體:office30天試用版\r\n保固：一年有限硬體保固瑕疵擔保\r\n\r\n注意:新機不包含手寫筆，本賣場手寫筆圖片僅供參考，謝謝\r\n注意:鍵盤已含在主機裡面，故贈品不會帶出，謝謝
+## 9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ▼送實體鍵盤+office(共市值6680▼Microsoft 微軟Surface Pro FJZ-00011(Core i7/8G/256G/W10P)\\r\\n★學習、工作、娛樂、隨處滿足 \r\n★續航力較前一代提升50%\r\n★效能進化2.5倍\r\n★安靜、無風扇式冷卻系統\r\n\r\n處理器：第7代intel core i7\r\n記憶體：8gb ram \r\n硬 碟：256gb ssd \r\n顯示器：12.3吋 (2736x1821)觸控螢幕 \r\n重 量：單機身784g \r\n作業系統:windows 10 pro \r\n軟體:office30天試用版\r\n保固：一年有限硬體保固瑕疵擔保\r\n\r\n加購office優惠\t\t\t\t\t\t\t\t\r\n↑買nb加購office 詳細請點\r\n\r\n\r\n本商品詳細規格
+## 10                                                                                                                                                                                                                                                                                                                                               ▼微軟終極筆電送Office365+手寫筆▼▼微軟終極筆電 Surface Book2▼(i7-8650U/8G/256G PCIe SSDGTX1050-2G/W10P)\\r\\n【館長小叮嚀】必買surface book2原因 \r\n▃▅★★windows hello 人臉辨識功能★▅▃ \r\n★觸控螢幕\r\n★多變模式(form factor)\r\n★超級長效電池(17 小時)\r\n★高效能(獨立顯卡 gtx1050)\r\n\r\n處理器：第8代intel core i7\r\n記憶體：8gb ram\r\n硬  碟：256g pcie ssd\r\n獨立顯卡：gtx1050 2gb gddr5\r\n顯示器：13.5吋 (3000x2000)觸控螢幕\r\n重  量：單機身1642g\r\n軟體1：windows 10 pro作業系統\r\n保固：一年有限硬體瑕疵擔保\r\n\r\n本商品詳細規格\r\n\r\n\r\n\r\n注意:新機不包含手寫筆，本賣場手寫筆圖片僅供參考\r\n注意:新機不包含精準滑鼠，本賣場精準滑鼠圖片僅供參考\r\n注意:新機不包含surface dial，本賣場surface dial僅供參考
+## 11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Microsoft 微軟Surface Go 鍵盤_黑(KCM-00018)\\r\\n新一代的實體鍵盤保護蓋專為 surface go 所打造，可提供最先進的 surface 打字體驗。surface go type cover 外觀和操作就像傳統膝上型電腦鍵盤。\r\n\r\n★surface go 4g 64g&lt;U+25BA&gt;點此前往\r\n★surface go 8g 128g&lt;U+25BA&gt;點此前往\r\n★surface go 鍵盤_白金&lt;U+25BA&gt;點此前往\r\n★surface go 鍵盤_酒紅&lt;U+25BA&gt;點此前往\r\n★surface go 鍵盤_鈷藍&lt;U+25BA&gt;點此前往
+## 12                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ★送實體鍵盤+Office★Microsoft 微軟Surface Pro 4★Core i5∥128GB SSD∥Win 10 Pro★\\r\\n《全民瘋surface 現省2000》\r\n&lt;U+25BA&gt;原價$33888．1 13起特價↘$31888\r\n再送實體鍵盤+office365 中文個人版\r\n\r\n\r\n處理器：第6代intel core i5\r\n記憶體：4gb ram\r\n硬  碟：128gb ssd\r\n顯示器：12.3吋 (2736x1824)觸控螢幕\r\n隨  附：數位觸控筆\r\n重  量：單機身786g\r\n作業系統:windows 10 pro\r\n保固：一年有限硬體保固
+## 13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \\r\\n★送原廠黑色鍵盤!!!\r\n處理器：第7代intel core i5 \r\n記憶體：4gb ram \r\n硬 碟：128gb ssd \r\n顯示器：12.3吋 (2736x1821)觸控螢幕 \r\n重 量：單機身770g \r\n作業系統:windows 10 pro \r\n※※※無附office~需自行購買※※※
+## 14                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Microsoft 微軟Surface 擴充基座v4\\r\\n◆為 surface 和連接配件提供源源不絕的電力\r\n◆速度超快的充電連接埠和乙太網路連接埠\r\n◆多個 usb 連接埠，可供喜愛的配件使用\r\n◆適合喇叭或耳機使用的音訊輸出連接埠
+## 15                                                                                                                                                                                                                                                                                                                                             ▼微軟終極筆電送Office365+手寫筆▼▼微軟終極筆電 Surface Book2▼(i7-8650U/16G/512G PCIe SSDGTX1050-2G/W10P)\\r\\n【館長小叮嚀】必買surface book2原因 \r\n▃▅★★windows hello 人臉辨識功能★▅▃ \r\n★觸控螢幕\r\n★多變模式(form factor)\r\n★超級長效電池(17 小時)\r\n★高效能(獨立顯卡 gtx1050)\r\n\r\n處理器：第8代intel core i7\r\n記憶體：16gb ram\r\n硬  碟：512g pcie ssd\r\n獨立顯卡：gtx1050 2gb gddr5\r\n顯示器：13.5吋 (3000x2000)觸控螢幕\r\n重  量：單機身1642g\r\n軟體1：windows 10 pro作業系統\r\n保固：一年有限硬體瑕疵擔保\r\n\r\n本商品詳細規格\r\n\r\n\r\n\r\n注意:新機不包含手寫筆，本賣場手寫筆圖片僅供參考\r\n注意:新機不包含精準滑鼠，本賣場精準滑鼠圖片僅供參考\r\n注意:新機不包含surface dial，本賣場surface dial僅供參考
+## 16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Microsoft 微軟Surface Go 鍵盤_白金(KCS-00018)\\r\\n新一代的實體鍵盤保護蓋專為 surface go 所打造，可提供最先進的 surface 打字體驗。surface go type cover 外觀和操作就像傳統膝上型電腦鍵盤。\r\n\r\n★surface go 4g 64g&lt;U+25BA&gt;點此前往\r\n★surface go 8g 128g&lt;U+25BA&gt;點此前往\r\n★surface go 鍵盤_酒紅&lt;U+25BA&gt;點此前往\r\n★surface go 鍵盤_鈷藍&lt;U+25BA&gt;點此前往\r\n★surface go 鍵盤_黑&lt;U+25BA&gt;點此前往
+## 17                                                                                                                                                                                                                                                                                                                                                                                                                                            &lt;U+0001F514&gt;拒絕盜版 買Office終身版&lt;U+0001F449&gt;▼送實體鍵盤+office 2016終身版▼Microsoft 微軟Surface Pro FJT-00011(Core i5/4G/128G/W10P)\\r\\n★學習、工作、娛樂、隨處滿足 \r\n★續航力較前一代提升50%\r\n★效能進化2.5倍\r\n★安靜、無風扇式冷卻系統\r\n\r\n處理器：第7代intel core i5\r\n記憶體：4gb ram\r\n硬  碟：128gb ssd\r\n顯示器：12.3吋 (2736x1821)觸控螢幕\r\n重  量：單機身770g\r\n作業系統:windows 10 pro\r\n軟體:office30天試用版\r\n保固：一年有限硬體保固瑕疵擔保\r\n\r\n本商品詳細規格\r\n\r\n\r\n\r\n注意:新機不包含鍵盤、手寫筆，本賣場所有鍵盤、手寫筆圖片僅供參考，謝謝\r\n注意:鍵盤已含在主機裡面，故贈品不會帶出，謝謝
+## 18 ▼Microsoft 微軟 Surface Studio▼Core i7/32GB/2TB/GTX980M-4G/W10P為展現效能而生★顛覆桌上定義\\r\\n【館長小叮嚀】必買surface studio原因 \r\n▼▃▅★顛覆桌上定義★▅▃▼\r\n‧surface studio 專為創作而設計，\r\n直立使用或當做繪圖板來繪圖皆可。\r\n▃▅★★適合您想法的出色螢幕★▅▃  \r\n具有 1350 萬像素逼真色彩和清晰度的螢幕上欣賞那些想法，\r\n專業級的功能與效能。 \r\n▃▅★★生產力是重複、辛勤工作的直接成果★▅▃\r\n 配備 intelR core&lt;U+2122&gt; 處理器和nvidiaR geforceR gtx 980m \r\n的 surface studio，可讓您實現成果。\r\n▃▅★★您可以從使用零重力支軸開始體驗★▅▃\r\n用一隻手輕鬆地將 28 吋 pixelsense&lt;U+2122&gt; 顯示器向下移成工作室模式，就是完美的繪圖板角度。 \r\n\r\n處理器：第 6 代 intelR core&lt;U+2122&gt; i7\r\n記憶體：32gb ram\r\n硬  碟：高速混合式硬碟選項：配備 2tb hdd (含128gb ssd快取記憶)\r\n獨立顯卡：nvidiaR geforceR gtx 980m 4gb gddr5 記憶體\r\n顯示器： 25.1 吋 x 17.3 吋 x 0.5 吋 (637.35 公釐 x 438.90 公釐 x 12.5 公釐) \r\n螢幕： 28 吋 pixelsense&lt;U+2122&gt; 顯示器 \r\n產品重量：最多 21 磅 (最多 9.56 公斤)\r\n軟體1：windows 10 pro作業系統\r\n保固：一年有限硬體瑕疵擔保
+## 19                                                                                                                                           ▼微軟終極筆電送Office365+手寫筆▼▼微軟終極筆電 Surface Book2▼(i7-8650U/16G/1TB PCIe SSDGTX1050-2G/W10P)\\r\\n【館長小叮嚀】必買surface book2原因 \r\n▃▅★★windows hello 人臉辨識功能★▅▃ \r\n★觸控螢幕\r\n★多變模式(form factor)\r\n★超級長效電池(17 小時)\r\n★高效能(獨立顯卡 gtx1050)\r\n\r\n處理器：第8代intel core i7\r\n記憶體：16gb ram\r\n硬  碟：1tb pcie ssd\r\n獨立顯卡：gtx1050 2gb gddr5\r\n顯示器：13.5吋 (3000x2000)觸控螢幕\r\n重  量：單機身1642g\r\n軟體1：windows 10 pro作業系統\r\n保固：一年有限硬體瑕疵擔保\r\n9月刷卡優惠限量需登錄\t\t\t\t\t\t\t\t\r\n↑銀行送1400詳情請點圖片了解\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n館長小叮嚀：先儲值再購物超划算～\t\t\t\t\t\t\t\t\r\n【9月儲值天天返利超有感】刷指定卡購買pchome儲值金\t\t\t\t\t\t\t\t\r\n→最高返利 1400 刷卡金 (限量，限1期)↑儲值返利1400詳情請點圖片了解\t\r\n\r\n\r\n加購office優惠\t\t\t\t\t\t\t\t\r\n↑買nb加購office 詳細請點\r\n\r\n\r\n本商品詳細規格
+## 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Microsoft 微軟Surface Pro FKH-00011(Core i7/16G/512G/W10P)\\r\\n【館長小叮嚀】買surface最划算 \r\n★.加碼送：實體鍵盤(市價$4490)\r\n★雙重送：office(市價2190)\r\n\r\n★學習、工作、娛樂、隨處滿足 \r\n★續航力較前一代提升50%\r\n★效能進化2.5倍\r\n★安靜、無風扇式冷卻系統\r\n\r\n處理器：第7代intel core i7\r\n記憶體：16gb ram \r\n硬 碟：512gb ssd \r\n顯示器：12.3吋 (2736x1821)觸控螢幕 \r\n重 量：單機身784g \r\n作業系統:windows 10 pro \r\n軟體:office30天試用版\r\n保固：一年有限硬體保固瑕疵擔保\r\n\r\n本商品詳細規格
+##     price originPrice author brand publishDate sellerId isPChome isNC17
+## 1   12888       12888                                          1      0
+## 2   17488       17488                                          1      0
+## 3   26888       26888                                          1      0
+## 4   41888       41888                                          1      0
+## 5   38000       38000                                          1      0
+## 6   33888       33888                                          1      0
+## 7   22999       22999                                          1      0
+## 8   30888       30888                                          1      0
+## 9   51888       51888                                          1      0
+## 10  63888       63888                                          1      0
+## 11   3490        3490                                          1      0
+## 12  26999       26999                                          1      0
+## 13  25200       25200                                          1      0
+## 14   5490        5490                                          1      0
+## 15  79888       79888                                          1      0
+## 16   4490        4490                                          1      0
+## 17  33888       33888                                          1      0
+## 18 143800      143800                                          1      0
+## 19  94888       94888                                          1      0
+## 20  70888       70888                                          1      0
+##    couponActid BU
+## 1         NULL ec
+## 2         NULL ec
+## 3         NULL ec
+## 4         NULL ec
+## 5         NULL ec
+## 6         NULL ec
+## 7         NULL ec
+## 8         NULL ec
+## 9         NULL ec
+## 10        NULL ec
+## 11        NULL ec
+## 12        NULL ec
+## 13        NULL ec
+## 14        NULL ec
+## 15        NULL ec
+## 16        NULL ec
+## 17        NULL ec
+## 18        NULL ec
+## 19        NULL ec
+## 20        NULL ec</code></pre>
 <pre class="r"><code>View(data.frame(do.call(rbind,res_json$prods)))</code></pre>
 </div>
 

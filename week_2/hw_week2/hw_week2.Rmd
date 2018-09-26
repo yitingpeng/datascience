@@ -21,6 +21,8 @@ res
 res_json <- content(res)
 res_json
 do.call(rbind,res_json$prods)
+df<-data.frame(do.call(rbind,res_json$prods))
+df
 View(data.frame(do.call(rbind,res_json$prods)))
 ```
 
