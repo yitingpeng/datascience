@@ -1,10 +1,12 @@
 # Datascience_week_2
 
 - Practice
+
 ```Note9 in PChome```
-  - R_Crawler_practice.r
-  - R_Crawler_practice.rmd
-  - R_Crawler_practice.html
+
+  - practice_week2.r
+  - practice_week2.rmd
+  - practice_week2.html
  
 
 - Homework
