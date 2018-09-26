@@ -2,16 +2,16 @@
 
 - Practice
 ```Note9 in PChome```
- - R_Crawler_practice.r
- - R_Crawler_practice.rmd
- - R_Crawler_practice.html
+  - R_Crawler_practice.r
+  - R_Crawler_practice.rmd
+  - R_Crawler_practice.html
  
 
 - Homework
 ```Microsoft in PChome```
- - hw_2.r
- - hw_2.rmd
- - [hw_2.html](https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
+  - hw_2.r
+  - hw_2.rmd
+  - [hw_2.html](https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
  
  
 
