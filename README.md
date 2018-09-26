@@ -12,7 +12,7 @@
 
     - [Hw_1](https://yitingpeng.github.io/datascience/week_1/hw_1.html)
 
-    - Hw_1_BONUS(UNFINISED)
+    - Hw_1_BONUS  (UNFINISED)
 
 2. Week2：
     
@@ -22,8 +22,8 @@
 
     * [Practice](https://yitingpeng.github.io/datascience/week_2/practice_week2/practice_week2.html	)
 
-    * [HW_2](https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
+    * [Hw_2](https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
 
-    * HW_2_BONUS
+    * Hw_2_BONUS
 
 
