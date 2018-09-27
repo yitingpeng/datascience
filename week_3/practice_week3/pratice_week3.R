@@ -1,56 +1,26 @@
----
-title: "coursepractice_week3"
-author: "peng"
-date: "2018年9月27日"
-output: html_document
----
+##week3_course practice
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Install and libary ggplot
-
-```{r}
-
+##install and libary ggplot
+install.packages('ggplot2')
 library(ggplot2)
 
-```
-
-## Using inner data: women and change the form of the data
-
-Using inner data and giving a summary statistics. 
-```{r}
-##using inner data and change the form of the data
+##using data and change the form of the data
 
 d1<-women
 d1
-##note：using captial words on the first letter of "v"iew
+##note�Gu�using captial words on the first letter of "v"iew
 View(d1)
 summary(d1)
-```
 
-## Plot a photogram
-
-First, it doesn't have dot on the photogram.
-```{r}
+##plot a photogram
 ggplot(d1, aes(x=height, y=weight))
-```
-
-Add dots into the photogram.
-```{r}
+##Add dots into the photogram.
 ggplot(d1, aes(x=height, y=weight))+
   geom_point()
-```
-
-Change the pattern of dots.
-```{r}
+##Change the pattern of dots.
 ggplot(d1, aes(x=height, y=weight)) +
   geom_point(color = "red", shape = 8)
-```
-
-Add details of labels.
-```{r}
+##Add details of labels
 ggplot(d1, aes(x=height, y=weight)) +
   geom_point(color = "red", shape = 8)+
   labs(subtitle="The relationship between height and weight",
@@ -59,46 +29,35 @@ ggplot(d1, aes(x=height, y=weight)) +
        title="Scatterplot",
        caption="Source: women")
 
-```
----
-##Part2:Convert unit into cm and kg.
-```{r}
+
+##try and error: does not work because of lack of y
+##ggplot(d1, aes(x=height))
+##ggplot(d1, aes(x=height))+geom_point()
+##ggplot(d1, aes(x=height)) + geom_point(color = "red", shape = 8)
+
+
+#convert unit into cm and kg
 d2<-d1
 d2<-data.frame(d2$height*2.54,d2$weight*0.45)
 View(d1)
 View(d2)
 names(d2)<-c("height", "weight")
-d2
-```
 
-Plot a photogram
-```{r}
+##plot a photogram
 ggplot(d2, aes(x=height, y=weight))
-```
-
-Add dots into the photogram.
-```{r}
+##Add dots into the photogram.
 ggplot(d2, aes(x=height, y=weight))+
   geom_point()
-```
-
-Change the pattern of dots.
-```{r}
+##Change the pattern of dots.
 ggplot(d2, aes(x=height, y=weight)) +
   geom_point(color = "blue", shape = 9)
-```
-
-Add details of labels.
-```{r}
+##Add details of labels
 ggplot(d2, aes(x=height, y=weight)) +
   geom_point(color = "blue", shape = 9)+
   labs(subtitle="The relationship between height and weight",
        y="Weight(kg)",
        x="Height(cm)",
-       title="Scatterplot2",
+       title="Scatterplot",
        caption="Source: women")
-
-```
-
 
 
