@@ -1,0 +1,53 @@
+---
+title: "coursepractice_week3"
+author: "peng"
+date: "2018年9月27日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install and libary ggplot
+
+```{r}
+
+library(ggplot2)
+
+```
+
+## Using inner data: women and change the form of the data
+
+Using inner data and giving a summary statistics. 
+```{r}
+##using inner data and change the form of the data
+
+d1<-women
+d1
+##note：using captial words on the first letter of "v"iew
+View(d1)
+summary(d1)
+```
+
+## Plot a photogram
+
+First, it doesn't have dot on the photogram.
+```{r}
+##plot a photogram
+ggplot(d1, aes(x=height, y=weight))
+```
+
+Add the dot into the photograph.
+```{r}
+ggplot(d1, aes(x=height, y=weight))+
+  geom_point()
+```
+
+
+Change the pattern of the dot.
+```{r}
+ggplot(d1, aes(x=height, y=weight)) +
+  geom_point(color = "red", shape = 8)
+```
+
