@@ -8,6 +8,7 @@ library(ggplot2)
 
 d1<-women
 d1
+##note：using captial words on the first letter of "v"iew
 View(d1)
 summary(d1)
 
