@@ -1,21 +1,20 @@
-# Datascience_week_2
+# Datascience_week_3: Visualization
 
 - Practice
 
-  ```Note9 in PChome```
+  ```Plot a photograph ```
 
-  - practice_week2.r
-  - practice_week2.rmd
-  - practice_week2.html
+  - practice_week3.r
+  - practice_week3.rmd
+  - [practice_week3.html](https://yitingpeng.github.io/datascience/week_3/practice_week3/practice_week3.html)
  
 
-- Homework
+- Homework (not yet)
   
-  ```Microsoft in PChome```
   
-  - hw_2.r
-  - hw_2.rmd
-  - [hw_2.html](https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
+  - hw_3.r
+  - hw_3.rmd
+  - [hw_3.html](https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
  
  
 
