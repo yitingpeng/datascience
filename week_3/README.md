@@ -12,9 +12,9 @@
 - Homework (not yet)
   
   
-  - hw_2.r
-  - hw_2.rmd
-  - [hw_2.html](https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
+  - hw_3.r
+  - hw_3.rmd
+  - [hw_3.html](https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
  
  
 
