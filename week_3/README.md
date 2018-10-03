@@ -15,12 +15,13 @@
  
 - 家中進度
 
-  - 上網查爬蟲相關資料練習、了解
-  - 練習習題
-  - Homework (not yet)
+  - 上網從內政部統計資料處下載Data(內容：新北市的國中以下、高中、大學大專以上比例)
+  - 讀取csv檔
+  - 畫圖表
+  - Homework 
   
      1. hw_week3.r
      2. hw_week3.rmd
-     3. [hw_week3.html](https://yitingpeng.github.io/datascience/week_3/practice_week3/practice_week3.html)
+     3. [hw_week3.html](https://yitingpeng.github.io/datascience/week_3/hw_week3/hw_week3.html)
  
  
