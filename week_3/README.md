@@ -1,20 +1,26 @@
 # Datascience_week_3: Visualization
 
-- Practice
+- week_3課程任務
 
-  ```Plot a photograph ```
+  - 建立一命名為 week_3(or task_3, hw_3)的資料夾。
+  - 完成一份資料視覺化小作品上傳至資料夾中，須繳交兩份檔案[.Rmd, .html)]。
+  - 加分任務地圖視覺化
 
-  - practice_week3.r
-  - practice_week3.rmd
-  - [practice_week3.html](https://yitingpeng.github.io/datascience/week_3/practice_week3/practice_week3.html)
- 
-
-- Homework (not yet)
+  - Practice
+    ```Plot a photograph ```
   
-  
-  - hw_3.r
-  - hw_3.rmd
-  - [hw_3.html](https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
+    1. practice_week3.r
+    2. practice_week3.rmd
+    3. [practice_week3.html](https://yitingpeng.github.io/datascience/week_3/practice_week3/practice_week3.html)
  
- 
+- 家中進度
 
+  - 上網查爬蟲相關資料練習、了解
+  - 練習習題
+  - Homework (not yet)
+  
+     1. hw_week3.r
+     2. hw_week3.rmd
+     3. [hw_week3.html](https://yitingpeng.github.io/datascience/week_3/practice_week3/practice_week3.html)
+ 
+ 
