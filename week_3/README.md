@@ -20,6 +20,7 @@
 
   - 讀取csv檔
   - 畫圖表
+  - 結合三種教育程度結構(not yet)
   - Homework 
   
      1. hw_week3.r
