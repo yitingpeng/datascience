@@ -6,32 +6,34 @@ library(ggplot2)
 newtaipei<-read.csv(file="newtaipeicity.csv", header= T, sep= ",")
 newtaipei
 View(newtaipei)
-heading<- c("year", "ratio.of.under_junior_school_level", "ratio of under high school level","ratio of above unversity level" )
+heading<- c("year", "ratio1", "ratio2","ratio3" )
 names(newtaipei)<-heading
 str(newtaipei)
-as.character(newtaipei[,1])
+as.character(newtaipei$year)
 summary(newtaipei)
 
-#plot a photogram
-ggplot(d2, aes(x="year", y="ratio of under junior school level" ))
-##Add dots into the photogram.
-ggplot(newtaipei, aes(x="year", y="ratio of under junior school level" ))+
-   geom_histogram()
+#plot a batchart
 
-ggplot(newtaipei, aes(x="year", y="ratio of under junior school level"))+
-  geom_bar(stat="identity", width=.5, fill="blue4") + 
-  labs(title="Ordered Bar Chart", 
-  subtitle="Make Vs Avg. Mileage", 
+
+ggplot(newtaipei, aes(x=year, y=ratio1))+geom_bar(stat="identity", width=.5, fill="tomato1") + 
+  labs(title="Ratio of under-junior-high-school level in New Taipei City", 
+       x="YEAR",
+       y="RATIO OF UNDER-JUNIOR-HIGH-SCHOOL LEVEL(%)",
+  subtitle="Year Vs Ratio", 
   caption="source: 內政部統計資料庫")
 
-##Change the pattern of dots.
-ggplot(d2, aes(x=height, y=weight)) +
-  geom_point(color = "blue", shape = 9)
-##Add details of labels
-ggplot(d2, aes(x=height, y=weight)) +
-  geom_point(color = "blue", shape = 9)+
-  labs(subtitle="The relationship between height and weight",
-       y="Weight(kg)",
-       x="Height(cm)",
-       title="Scatterplot",
-       caption="Source: women")
+ggplot(newtaipei, aes(x=year, y=ratio2))+geom_bar(stat="identity", width=.5, fill="tomato2") + 
+  labs(title="Ratio of high-school level in New Taipei City", 
+       x="YEAR",
+       y="RATIO OF HIGH-SCHOOL LEVEL(%)",
+       subtitle="Year Vs Ratio", 
+       caption="source: 內政部統計資料庫")
+
+ggplot(newtaipei, aes(x=year, y=ratio3))+geom_bar(stat="identity", width=.5, fill="tomato3") + 
+  labs(title="Ratio of above-unversity level in New Taipei City", 
+       x="YEAR",
+       y="RATIO OF ABOBE-UNVERSITY LEVEL(%)",
+       subtitle="Year Vs Ratio", 
+       caption="source: 內政部統計資料庫")
+
+

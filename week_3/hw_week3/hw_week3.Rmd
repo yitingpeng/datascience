@@ -17,87 +17,40 @@ library(ggplot2)
 
 ```
 
-## Using inner data: women and change the form of the data
-
-Using inner data and giving a summary statistics. 
+### Using data: 
+2001-2017 15歲以上民間人口之教育程度結構：國中程度以下/高中程度/大專程度以上
 ```{r}
-##using inner data and change the form of the data
-
-d1<-women
-d1
-##note：using captial words on the first letter of "v"iew
-View(d1)
-summary(d1)
+newtaipei<-read.csv(file="newtaipeicity.csv", header= T, sep= ",")
+View(newtaipei)
+heading<- c("year", "ratio1", "ratio2","ratio3" )
+names(newtaipei)<-heading
+newtaipei
+str(newtaipei)
+as.character(newtaipei$year)
+summary(newtaipei)
 ```
 
-## Plot a photogram
-
-First, it doesn't have dot on the photogram.
+### Plot a barchart 
 ```{r}
-ggplot(d1, aes(x=height, y=weight))
+ggplot(newtaipei, aes(x=year, y=ratio1))+geom_bar(stat="identity", width=.5, fill="tomato1") + 
+  labs(title="Ratio of under-junior-high-school level in New Taipei City", 
+       x="YEAR",
+       y="RATIO OF UNDER-JUNIOR-HIGH-SCHOOL LEVEL(%)",
+  subtitle="Year Vs Ratio", 
+  caption="source: 內政部統計資料庫")
+
+ggplot(newtaipei, aes(x=year, y=ratio2))+geom_bar(stat="identity", width=.5, fill="tomato2") + 
+  labs(title="Ratio of high-school level in New Taipei City", 
+       x="YEAR",
+       y="RATIO OF HIGH-SCHOOL LEVEL(%)",
+       subtitle="Year Vs Ratio", 
+       caption="source: 內政部統計資料庫")
+
+ggplot(newtaipei, aes(x=year, y=ratio3))+geom_bar(stat="identity", width=.5, fill="tomato3") + 
+  labs(title="Ratio of above-unversity level in New Taipei City", 
+       x="YEAR",
+       y="RATIO OF ABOBE-UNVERSITY LEVEL(%)",
+       subtitle="Year Vs Ratio", 
+       caption="source: 內政部統計資料庫")
 ```
-
-Add dots into the photogram.
-```{r}
-ggplot(d1, aes(x=height, y=weight))+
-  geom_point()
-```
-
-Change the pattern of dots.
-```{r}
-ggplot(d1, aes(x=height, y=weight)) +
-  geom_point(color = "red", shape = 8)
-```
-
-Add details of labels.
-```{r}
-ggplot(d1, aes(x=height, y=weight)) +
-  geom_point(color = "red", shape = 8)+
-  labs(subtitle="The relationship between height and weight",
-       y="Weight(lb)",
-       x="Height(ft)",
-       title="Scatterplot",
-       caption="Source: women")
-
-```
----
-##Part2:Convert unit into cm and kg.
-```{r}
-d2<-d1
-d2<-data.frame(d2$height*2.54,d2$weight*0.45)
-View(d1)
-View(d2)
-names(d2)<-c("height", "weight")
-d2
-```
-
-Plot a photogram
-```{r}
-ggplot(d2, aes(x=height, y=weight))
-```
-
-Add dots into the photogram.
-```{r}
-ggplot(d2, aes(x=height, y=weight))+
-  geom_point()
-```
-
-Change the pattern of dots.
-```{r}
-ggplot(d2, aes(x=height, y=weight)) +
-  geom_point(color = "blue", shape = 9)
-```
-
-Add details of labels.
-```{r}
-ggplot(d2, aes(x=height, y=weight)) +
-  geom_point(color = "blue", shape = 9)+
-  labs(subtitle="The relationship between height and weight",
-       y="Weight(kg)",
-       x="Height(cm)",
-       title="Scatterplot2",
-       caption="Source: women")
-
-```
-
 
