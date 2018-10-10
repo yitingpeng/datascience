@@ -35,7 +35,8 @@ for(i in 1:length(jong.hrefs)){
   article.url <- paste0('https://www.ptt.cc', jong.hrefs[i])
   article <- html_nodes(read_html(article.url), "#main-content")
   article.content <- html_text(article)
-  #  to convert a character vector between encodings: the ?��i?�? stands for ?��internationalization?�?.
+  
+  
   article.utf8 <- iconv(article.content, 'utf8')
   # vector start counting from 1!!
   jong.article.data <- c(jong.article.data, article.utf8)
@@ -47,21 +48,41 @@ View(jong.article.data)
 str(article.utf8)
 str(jong.article.data)
 
-#�_��
+#斷詞
 install.packages("jiebaR")
 install.packages("jiebaRD")
 library("jiebaRD")
 library("jiebaR")
+library(tm)
+library(tmcn)
+
+d.corpus <- tm_map(d.corpus, removeNumbers)
 
 Sys.setlocale(category = "LC_ALL", locale = "cht")
-cc = worker()
+cc <- worker()
+new_user_word(cc,words = "鍾碩","n")
+new_user_word(cc,words = "姜哲和妍珠","n")
+new_user_word(cc,words = "當你沉睡時","n")
+new_user_word(cc,words = "聽見你的聲音","n")
+new_user_word(cc,words = "批踢踢","n")
+new_user_word(cc,words = "宰璨","n")
+new_user_word(cc,words = "搜查官","n")
+new_user_word(cc,words = "哎一古","n")
+new_user_word(cc,words = "祕密花園","n")
 cc[jong.article.data]
 jong<-table(cc[jong.article.data])
 jong
 jong<-data.frame(jong)
 jong<-jong[order(jong$Freq,decreasing = T),]
 head(jong)
-#get html/all pages
+
+#get a wordcloud
 install.packages("wordcloud2")
 library(wordcloud2)
 wordcloud2(jong)
+
+#
+library(Rwordseg)
+library(tm)
+jong <- tm_map(jong, removePunctuation)
+

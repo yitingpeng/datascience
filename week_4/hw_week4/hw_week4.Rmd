@@ -72,3 +72,21 @@ library(wordcloud2)
 wordcloud2(jong)
 ```
 
+```{r 新詞以及清理}
+new_user_word(cc,words = "鍾碩","n")
+new_user_word(cc,words = "姜哲和妍珠","n")
+new_user_word(cc,words = "當你沉睡時","n")
+new_user_word(cc,words = "聽見你的聲音","n")
+new_user_word(cc,words = "批踢踢","n")
+new_user_word(cc,words = "宰璨","n")
+new_user_word(cc,words = "搜查官","n")
+new_user_word(cc,words = "哎一古","n")
+new_user_word(cc,words = "祕密花園","n")
+cc[jong.article.data]
+jong<-table(cc[jong.article.data])
+jong
+jong<-data.frame(jong)
+jong<-jong[order(jong$Freq,decreasing = T),]
+head(jong)
+```
+
