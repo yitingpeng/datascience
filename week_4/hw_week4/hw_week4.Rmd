@@ -68,7 +68,6 @@ head(jong)
 ```
 
 ```{r}
-
 library(wordcloud2)
 wordcloud2(jong)
 ```
