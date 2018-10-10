@@ -1,4 +1,4 @@
-#install packages
+#openapi/r crawler
 install.packages("rJava")
 install.packages("Rwordseg", repos="http://R-Forge.R-project.org")
 install.packages("tm")
@@ -7,25 +7,16 @@ install.packages("wordcloud")
 install.packages("XML")
 install.packages("RCurl")
 install.packages("bitops")
-
+install.packages("jsonlite")
+#library packages
+library(rvest)
 library(XML)
+library(xml2)
+library(bitops)
 library(RCurl)
 library(httr)
 
 
-for(i in 1:58){
-  tmp <-paste(i,'.html', sep= " ")x
-  web <-paste("https://www.ptt.cc/bbs/LeeJongSuk/index",tmp,sep="")
-  html<-content(GET(web, asText=T))
-  htmlparse<- htmlParse(html)
-  web.list <-xpathSApply(html, "//div[@class='title']/a[@href]", xmlAttrs)
-  data <- rbind(data, paste("www.ptt.cc", web.list, sep= " "))
-  }
-data<- unlist(data)
-
-getdoc <-function(line)
-  
-  
 #get HTML/ only one page
 jong.html <-paste("https://www.ptt.cc/bbs/LeeJongSuk/index58.html")
 jong.title <- html_nodes(read_html(jong.html),".title a" )
@@ -44,7 +35,7 @@ for(i in 1:length(jong.hrefs)){
   article.url <- paste0('https://www.ptt.cc', jong.hrefs[i])
   article <- html_nodes(read_html(article.url), "#main-content")
   article.content <- html_text(article)
-  #  to convert a character vector between encodings: the ¡¥i¡¦ stands for ¡¥internationalization¡¦.
+  #  to convert a character vector between encodings: the ?€˜i?€? stands for ?€˜internationalization?€?.
   article.utf8 <- iconv(article.content, 'utf8')
   # vector start counting from 1!!
   jong.article.data <- c(jong.article.data, article.utf8)
@@ -54,6 +45,7 @@ for(i in 1:length(jong.hrefs)){
 jong.article.data[1]
 View(jong.article.data)
 str(article.utf8)
+str(jong.article.data)
 
 #Â_µü
 install.packages("jiebaR")
@@ -63,17 +55,13 @@ library("jiebaR")
 
 Sys.setlocale(category = "LC_ALL", locale = "cht")
 cc = worker()
-cc[article.utf8]
-jong<-table(cc[article.utf8])
+cc[jong.article.data]
+jong<-table(cc[jong.article.data])
 jong
 jong<-data.frame(jong)
-head(jong[order(jong$Freq,decreasing = T)],)
+jong<-jong[order(jong$Freq,decreasing = T),]
+head(jong)
 #get html/all pages
 install.packages("wordcloud2")
 library(wordcloud2)
 wordcloud2(jong)
-
-#for(i in 1:58){
-#jong.html1 <- paste("https:www.ptt.cc/bbs/LeeJongSuk/index",i,".html", spe=" ")
-#jong.html1
-#}
