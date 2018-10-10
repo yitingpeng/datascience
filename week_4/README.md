@@ -20,6 +20,5 @@
   
      1. hw_week4.r
      2. hw_week4.rmd
-     3. [hw_week4.html](https://yitingpeng.github.io/datascience/week_4/hw_week4//hw_week4.html)
- 
+     3. [hw_week4.html](https://yitingpeng.github.io/datascience/week_4/hw_week4/hw_week4.html)
  
