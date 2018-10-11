@@ -93,4 +93,4 @@ library(wordcloud2)
 wordcloud2(jong)
 ```
 
-
+knit('foo.Rmd', encoding = 'UTF-8')
