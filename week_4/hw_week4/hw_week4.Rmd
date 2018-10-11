@@ -1,5 +1,5 @@
 ---
-title: "hw_week4"
+title: "Word Cloud"
 author: "Peng Yi Ting"
 date: "2018年10月10日"
 output: html_document
@@ -8,6 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 
 ```{r}
 #openapi/r crawler
@@ -21,7 +22,6 @@ library(httr)
 ```
 
 ```{r}
-
 #get HTML/ only one page
 jong.html <-paste("https://www.ptt.cc/bbs/LeeJongSuk/index58.html")
 jong.title <- html_nodes(read_html(jong.html),".title a" )
@@ -31,7 +31,9 @@ jong.titletext<-html_text(jong.title)
 jong.titletext
 for(i in jong.titletext){
   print(i)}
+```
 
+```{r}
 # form a empty vector
 jong.article.data <- c()
 
@@ -40,8 +42,13 @@ for(i in 1:length(jong.hrefs)){
   article.url <- paste0('https://www.ptt.cc', jong.hrefs[i])
   article <- html_nodes(read_html(article.url), "#main-content")
   article.content <- html_text(article)
+  
+  
   article.utf8 <- iconv(article.content, 'utf8')
+  # vector start counting from 1!!
   jong.article.data <- c(jong.article.data, article.utf8)
+  # Suspend execution of R expressions for a specified time interval.
+  # Sys.sleep(sample(3:5, 1))
 }
 jong.article.data[1]
 View(jong.article.data)
@@ -50,29 +57,17 @@ str(jong.article.data)
 ```
 
 ```{r}
-
 #斷詞
-
 library("jiebaRD")
 library("jiebaR")
-
-Sys.setlocale(category = "LC_ALL", locale = "cht")
-cc = worker()
-cc[jong.article.data]
-jong<-table(cc[jong.article.data])
-jong
-jong<-data.frame(jong)
-jong<-jong[order(jong$Freq,decreasing = T),]
-head(jong)
+library(tm)
 
 ```
 
 ```{r}
-library(wordcloud2)
-wordcloud2(jong)
-```
 
-```{r 新詞以及清理}
+Sys.setlocale(category = "LC_ALL", locale = "cht")
+cc <- worker()
 new_user_word(cc,words = "鍾碩","n")
 new_user_word(cc,words = "姜哲和妍珠","n")
 new_user_word(cc,words = "當你沉睡時","n")
@@ -88,5 +83,12 @@ jong
 jong<-data.frame(jong)
 jong<-jong[order(jong$Freq,decreasing = T),]
 head(jong)
+
 ```
 
+```{r}
+#get a wordcloud
+
+library(wordcloud2)
+wordcloud2(jong)
+```
