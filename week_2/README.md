@@ -26,8 +26,9 @@
     ```Microsoft in PChome```
   
       1. hw_2.r
-      2. hw_2.rmd
+      2. hw_2.rmd(https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
       3. [hw_2.html](https://yitingpeng.github.io/datascience/week_2/hw_week2/hw_week2.html)
+      
  
  
 
