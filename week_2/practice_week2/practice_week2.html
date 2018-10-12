@@ -136,17 +136,17 @@ url &lt;-&quot;https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=note9&amp
 res &lt;- GET(url)
 res</code></pre>
 <pre><code>## Response [https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=note9&amp;page=1&amp;sort=rnk/dc]
-##   Date: 2018-10-10 03:31
+##   Date: 2018-10-12 16:13
 ##   Status: 200
 ##   Content-Type: application/json
-##   Size: 28.9 kB</code></pre>
+##   Size: 26.9 kB</code></pre>
 <pre class="r"><code>res_json &lt;- content(res)
 res_json</code></pre>
 <pre><code>## $QTime
-## [1] 183
+## [1] 49
 ## 
 ## $totalRows
-## [1] 945
+## [1] 960
 ## 
 ## $totalPage
 ## [1] 48
@@ -197,7 +197,7 @@ res_json</code></pre>
 ## [1] &quot;Samsung Galaxy Note 9 (6G/128G)-湛海藍&quot;
 ## 
 ## $prods[[1]]$describe
-## [1] &quot;6G/128G湛海藍★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n\r\nsamsung pay上線 好禮三重享\r\n\r\n↑活動詳情請點圖片了解&quot;
+## [1] &quot;6G/128G湛海藍★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益\r\n\r\n選購其他顏色\r\n●湛海藍\r\n●霧金銅\r\n●薰衣紫&quot;
 ## 
 ## $prods[[1]]$price
 ## [1] 29900
@@ -224,7 +224,9 @@ res_json</code></pre>
 ## [1] 0
 ## 
 ## $prods[[1]]$couponActid
-## list()
+## $prods[[1]]$couponActid[[1]]
+## [1] &quot;C012737&quot;
+## 
 ## 
 ## $prods[[1]]$BU
 ## [1] &quot;ec&quot;
@@ -232,28 +234,28 @@ res_json</code></pre>
 ## 
 ## $prods[[2]]
 ## $prods[[2]]$Id
-## [1] &quot;DYAL6U-A9009BBGC&quot;
+## [1] &quot;DYAL6U-A9009G95N&quot;
 ## 
 ## $prods[[2]]$cateId
 ## [1] &quot;DYAL6V&quot;
 ## 
 ## $prods[[2]]$picS
-## [1] &quot;/items/DYAL6UA9009BBGC/000002_1534246254.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009G95N/000002_1538374422.jpg&quot;
 ## 
 ## $prods[[2]]$picB
-## [1] &quot;/items/DYAL6UA9009BBGC/000001_1538618548.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009G95N/000001_1539309519.jpg&quot;
 ## 
 ## $prods[[2]]$name
-## [1] &quot;Samsung Galaxy Note 9 (8G/512G)&quot;
+## [1] &quot;Samsung Galaxy Note 9 (8G/512G)-湛海藍&quot;
 ## 
 ## $prods[[2]]$describe
-## [1] &quot;★送原廠皮套+Office 365+一年延長保★Samsung Galaxy Note 9 (8G/512G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●8g ram 512 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益\r\n\r\nsamsung pay上線 好禮三重享\r\n\r\n↑活動詳情請點圖片了解&quot;
+## [1] &quot;▼每日強檔‧瘋殺特賣▼★送三星24型PLS寬螢幕+一年延長保固★★Samsung Galaxy Note 9 (8G/512G)\\r\\n《限時狂降★週一10點回價》 \r\n開始﹕１０／１２(星期五)１０：００  \r\n結束﹕１０／１５(星期一)１０：００\r\n活動價↘$３８９００\r\n\r\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●8g ram 512 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益\r\n\r\n搭配samsung s24f350fhe 24型pls寬螢幕(市價$3788)\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n館長小叮嚀：儲值購買最划算～\r\n【10月限定】刷指定卡買22 000儲值金\r\n送1400刷卡金→最高回饋6.3%↑10月儲值優惠活動，請點我\r\n\r\n\r\n10月刷卡優惠 限量需登錄\r\n↑銀行刷卡活動詳情請點圖片了解&quot;
 ## 
 ## $prods[[2]]$price
-## [1] 39400
+## [1] 38900
 ## 
 ## $prods[[2]]$originPrice
-## [1] 39400
+## [1] 38900
 ## 
 ## $prods[[2]]$author
 ## [1] &quot;&quot;
@@ -274,7 +276,9 @@ res_json</code></pre>
 ## [1] 0
 ## 
 ## $prods[[2]]$couponActid
-## list()
+## $prods[[2]]$couponActid[[1]]
+## [1] &quot;C012737&quot;
+## 
 ## 
 ## $prods[[2]]$BU
 ## [1] &quot;ec&quot;
@@ -282,28 +286,28 @@ res_json</code></pre>
 ## 
 ## $prods[[3]]
 ## $prods[[3]]$Id
-## [1] &quot;DYAL6U-A9009G95N&quot;
+## [1] &quot;DYAL6U-A9009BBGC&quot;
 ## 
 ## $prods[[3]]$cateId
 ## [1] &quot;DYAL6V&quot;
 ## 
 ## $prods[[3]]$picS
-## [1] &quot;/items/DYAL6UA9009G95N/000002_1538374422.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009BBGC/000002_1534246254.jpg&quot;
 ## 
 ## $prods[[3]]$picB
-## [1] &quot;/items/DYAL6UA9009G95N/000001_1538996582.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009BBGC/000001_1538618548.jpg&quot;
 ## 
 ## $prods[[3]]$name
-## [1] &quot;Samsung Galaxy Note 9 (8G/512G)-湛海藍&quot;
+## [1] &quot;Samsung Galaxy Note 9 (8G/512G)&quot;
 ## 
 ## $prods[[3]]$describe
-## [1] &quot;▼週慶優雅購★從容下單▼★送三星24型PLS寬螢幕+一年延長保固★★Samsung Galaxy Note 9 (8G/512G)\\r\\n《必買優惠↘超值搭配》\r\n開始：１０／０９（二）１０：００\r\n結束：１０／１６（二）１０：００\r\n限時價↘$３８９００\r\n數量有限，售完為止\r\n\r\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●8g ram 512 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益\r\n\r\n搭配samsung s24f350fhe 24型pls寬螢幕(市價$3788)\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n館長小叮嚀：儲值購買最划算～\r\n【10 9~11慶雙10】刷指定卡買15 000儲值金\r\n送1200刷卡金+300加碼金→最高回饋10%↑10月儲值優惠活動，請點我\r\n\r\n\r\n10 9-10 11刷卡優惠 限量需登錄\r\n↑銀行刷卡活動詳情請點圖片了解&quot;
+## [1] &quot;★送原廠皮套+Office 365+一年延長保★Samsung Galaxy Note 9 (8G/512G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●8g ram 512 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益\r\n\r\nsamsung pay上線 好禮三重享\r\n\r\n↑活動詳情請點圖片了解&quot;
 ## 
 ## $prods[[3]]$price
-## [1] 38900
+## [1] 39400
 ## 
 ## $prods[[3]]$originPrice
-## [1] 38900
+## [1] 39400
 ## 
 ## $prods[[3]]$author
 ## [1] &quot;&quot;
@@ -324,7 +328,9 @@ res_json</code></pre>
 ## [1] 0
 ## 
 ## $prods[[3]]$couponActid
-## list()
+## $prods[[3]]$couponActid[[1]]
+## [1] &quot;C012737&quot;
+## 
 ## 
 ## $prods[[3]]$BU
 ## [1] &quot;ec&quot;
@@ -347,7 +353,7 @@ res_json</code></pre>
 ## [1] &quot;Samsung Galaxy Note 9 (6G/128G)-薰衣紫&quot;
 ## 
 ## $prods[[4]]$describe
-## [1] &quot;6G/128G薰衣紫★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n\r\nsamsung pay上線 好禮三重享\r\n\r\n↑活動詳情請點圖片了解&quot;
+## [1] &quot;6G/128G薰衣紫★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益\r\n\r\n選購其他顏色\r\n●湛海藍\r\n●霧金銅\r\n●薰衣紫&quot;
 ## 
 ## $prods[[4]]$price
 ## [1] 29900
@@ -374,7 +380,9 @@ res_json</code></pre>
 ## [1] 0
 ## 
 ## $prods[[4]]$couponActid
-## list()
+## $prods[[4]]$couponActid[[1]]
+## [1] &quot;C012737&quot;
+## 
 ## 
 ## $prods[[4]]$BU
 ## [1] &quot;ec&quot;
@@ -397,7 +405,7 @@ res_json</code></pre>
 ## [1] &quot;Samsung Galaxy Note 9 (6G/128G)-霧金銅&quot;
 ## 
 ## $prods[[5]]$describe
-## [1] &quot;6G/128G霧金銅★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n\r\nsamsung pay上線 好禮三重享\r\n\r\n↑活動詳情請點圖片了解&quot;
+## [1] &quot;6G/128G霧金銅★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益\r\n\r\n選購其他顏色\r\n●湛海藍\r\n●霧金銅\r\n●薰衣紫&quot;
 ## 
 ## $prods[[5]]$price
 ## [1] 29900
@@ -424,7 +432,9 @@ res_json</code></pre>
 ## [1] 0
 ## 
 ## $prods[[5]]$couponActid
-## list()
+## $prods[[5]]$couponActid[[1]]
+## [1] &quot;C012737&quot;
+## 
 ## 
 ## $prods[[5]]$BU
 ## [1] &quot;ec&quot;
@@ -432,28 +442,28 @@ res_json</code></pre>
 ## 
 ## $prods[[6]]
 ## $prods[[6]]$Id
-## [1] &quot;DYAL6U-A9009CPZ9&quot;
+## [1] &quot;DYAL6U-A9009BYWE&quot;
 ## 
 ## $prods[[6]]$cateId
-## [1] &quot;DYAL6A&quot;
+## [1] &quot;DYAL6U&quot;
 ## 
 ## $prods[[6]]$picS
-## [1] &quot;/items/DYAL6UA9009CPZ9/000002_1535529471.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009BYWE/000002_1535081094.jpg&quot;
 ## 
 ## $prods[[6]]$picB
-## [1] &quot;/items/DYAL6UA9009CPZ9/000001_1535529471.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009BYWE/000001_1535081094.jpg&quot;
 ## 
 ## $prods[[6]]$name
-## [1] &quot;Samsung Galaxy Note 9 (6G/128G)&quot;
+## [1] &quot;Samsung Galaxy Note 9 (6G/128G)-湛海藍&quot;
 ## 
 ## $prods[[6]]$describe
-## [1] &quot;★送配件購物金$2000+一年延長保固 ★(全新福利品) 贈原廠行電  SAMSUNG Galaxy Note 9 6G/128G 6.4吋八核手機\\r\\n4g + 4g 雙卡雙待    \r\n  採用 android 8.1 oreo 作業系統    \r\n  6.4 吋 2 960 x 1 440pixels 解析度 super amoled 觸控螢幕（516ppi）    \r\n  內建 2.7ghz + 1.7ghz 八核心處理器    \r\n  內建 6gb ram   128gb rom    \r\n  雙 1 200 萬畫素主相機、800 萬畫素前鏡頭    \r\n  5ca、wi-fi 802.11 a b g n ac（2.4ghz &amp; 5ghz）mu-mimo、藍牙 5.0    \r\n  提供 s pen 手寫筆    \r\n  ip68 防水防塵等級    \r\n  指紋辨識、虹膜辨識、臉部辨識、心跳感測器    \r\n  採用 usb type-c 規格，支援 qc 2.0 快充、wpc 與 pma 無線充電    \r\n  支援 microsd 記憶卡，最高可擴充至 128gb 儲存空間  \r\n\r\n\r\n如有延長保固卡需自行上網登錄\r\n請注意：此品號為\&quot;外盒受損之福利品\&quot;，商品全新未使用，如有疑慮請勿購買，謝謝\r\n\r\n購物金登陸網址：\r\nhttps:  tw-note9-preorder-10187-stg.azurewebsites.net index.aspx&quot;
+## [1] &quot;6G/128G湛海藍★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益&quot;
 ## 
 ## $prods[[6]]$price
-## [1] 29900
+## [1] 30900
 ## 
 ## $prods[[6]]$originPrice
-## [1] 29900
+## [1] 30900
 ## 
 ## $prods[[6]]$author
 ## [1] &quot;&quot;
@@ -474,7 +484,9 @@ res_json</code></pre>
 ## [1] 0
 ## 
 ## $prods[[6]]$couponActid
-## list()
+## $prods[[6]]$couponActid[[1]]
+## [1] &quot;C012737&quot;
+## 
 ## 
 ## $prods[[6]]$BU
 ## [1] &quot;ec&quot;
@@ -482,28 +494,28 @@ res_json</code></pre>
 ## 
 ## $prods[[7]]
 ## $prods[[7]]$Id
-## [1] &quot;DYAL6U-A9009BBFK&quot;
+## [1] &quot;DYAL6U-A9009CPZ9&quot;
 ## 
 ## $prods[[7]]$cateId
-## [1] &quot;DYAL6U&quot;
+## [1] &quot;DYAL6A&quot;
 ## 
 ## $prods[[7]]$picS
-## [1] &quot;/items/DYAL6UA9009BBFK/000002_1534246277.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009CPZ9/000002_1535529471.jpg&quot;
 ## 
 ## $prods[[7]]$picB
-## [1] &quot;/items/DYAL6UA9009BBFK/000001_1536025058.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009CPZ9/000001_1535529471.jpg&quot;
 ## 
 ## $prods[[7]]$name
-## [1] &quot;Samsung Galaxy Note 9 (6G/128G)(黑色沙漠版)&quot;
+## [1] &quot;Samsung Galaxy Note 9 (6G/128G)&quot;
 ## 
 ## $prods[[7]]$describe
-## [1] &quot;黑色沙漠版★送Office 365+遊戲特製背蓋+超值虛寶★送一年延長保固Samsung Galaxy Note 9 (6G/128G)(黑色沙漠版)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n黑色沙漠版★送遊戲特製背蓋+超值虛寶\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益&quot;
+## [1] &quot;★送配件購物金$2000+一年延長保固 ★(全新福利品) 贈原廠行電  SAMSUNG Galaxy Note 9 6G/128G 6.4吋八核手機\\r\\n4g + 4g 雙卡雙待    \r\n  採用 android 8.1 oreo 作業系統    \r\n  6.4 吋 2 960 x 1 440pixels 解析度 super amoled 觸控螢幕（516ppi）    \r\n  內建 2.7ghz + 1.7ghz 八核心處理器    \r\n  內建 6gb ram   128gb rom    \r\n  雙 1 200 萬畫素主相機、800 萬畫素前鏡頭    \r\n  5ca、wi-fi 802.11 a b g n ac（2.4ghz &amp; 5ghz）mu-mimo、藍牙 5.0    \r\n  提供 s pen 手寫筆    \r\n  ip68 防水防塵等級    \r\n  指紋辨識、虹膜辨識、臉部辨識、心跳感測器    \r\n  採用 usb type-c 規格，支援 qc 2.0 快充、wpc 與 pma 無線充電    \r\n  支援 microsd 記憶卡，最高可擴充至 128gb 儲存空間  \r\n\r\n\r\n如有延長保固卡需自行上網登錄\r\n請注意：此品號為\&quot;外盒受損之福利品\&quot;，商品全新未使用，如有疑慮請勿購買，謝謝\r\n\r\n購物金登陸網址：\r\nhttps:  tw-note9-preorder-10187-stg.azurewebsites.net index.aspx&quot;
 ## 
 ## $prods[[7]]$price
-## [1] 30400
+## [1] 29900
 ## 
 ## $prods[[7]]$originPrice
-## [1] 30400
+## [1] 29900
 ## 
 ## $prods[[7]]$author
 ## [1] &quot;&quot;
@@ -532,28 +544,28 @@ res_json</code></pre>
 ## 
 ## $prods[[8]]
 ## $prods[[8]]$Id
-## [1] &quot;DYAL6U-A9009BYWE&quot;
+## [1] &quot;DYAL6U-A9009BYYL&quot;
 ## 
 ## $prods[[8]]$cateId
 ## [1] &quot;DYAL6U&quot;
 ## 
 ## $prods[[8]]$picS
-## [1] &quot;/items/DYAL6UA9009BYWE/000002_1535081094.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009BYYL/000002_1535081051.jpg&quot;
 ## 
 ## $prods[[8]]$picB
-## [1] &quot;/items/DYAL6UA9009BYWE/000001_1535081094.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009BYYL/000001_1535081051.jpg&quot;
 ## 
 ## $prods[[8]]$name
-## [1] &quot;Samsung Galaxy Note 9 (6G/128G)-湛海藍&quot;
+## [1] &quot;Samsung Galaxy Note 9 (6G/128G)-薰衣紫&quot;
 ## 
 ## $prods[[8]]$describe
-## [1] &quot;6G/128G湛海藍★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益&quot;
+## [1] &quot;6G/128G薰衣紫★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益&quot;
 ## 
 ## $prods[[8]]$price
-## [1] 31500
+## [1] 30900
 ## 
 ## $prods[[8]]$originPrice
-## [1] 31500
+## [1] 30900
 ## 
 ## $prods[[8]]$author
 ## [1] &quot;&quot;
@@ -574,7 +586,9 @@ res_json</code></pre>
 ## [1] 0
 ## 
 ## $prods[[8]]$couponActid
-## list()
+## $prods[[8]]$couponActid[[1]]
+## [1] &quot;C012737&quot;
+## 
 ## 
 ## $prods[[8]]$BU
 ## [1] &quot;ec&quot;
@@ -582,28 +596,28 @@ res_json</code></pre>
 ## 
 ## $prods[[9]]
 ## $prods[[9]]$Id
-## [1] &quot;DYAL6U-A9009BYYL&quot;
+## [1] &quot;DYAL6U-A9009BBFK&quot;
 ## 
 ## $prods[[9]]$cateId
 ## [1] &quot;DYAL6U&quot;
 ## 
 ## $prods[[9]]$picS
-## [1] &quot;/items/DYAL6UA9009BYYL/000002_1535081051.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009BBFK/000002_1534246277.jpg&quot;
 ## 
 ## $prods[[9]]$picB
-## [1] &quot;/items/DYAL6UA9009BYYL/000001_1535081051.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009BBFK/000001_1536025058.jpg&quot;
 ## 
 ## $prods[[9]]$name
-## [1] &quot;Samsung Galaxy Note 9 (6G/128G)-薰衣紫&quot;
+## [1] &quot;Samsung Galaxy Note 9 (6G/128G)(黑色沙漠版)&quot;
 ## 
 ## $prods[[9]]$describe
-## [1] &quot;6G/128G薰衣紫★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益&quot;
+## [1] &quot;黑色沙漠版★送Office 365+遊戲特製背蓋+超值虛寶★送一年延長保固Samsung Galaxy Note 9 (6G/128G)(黑色沙漠版)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n黑色沙漠版★送遊戲特製背蓋+超值虛寶\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益&quot;
 ## 
 ## $prods[[9]]$price
-## [1] 31500
+## [1] 30400
 ## 
 ## $prods[[9]]$originPrice
-## [1] 31500
+## [1] 30400
 ## 
 ## $prods[[9]]$author
 ## [1] &quot;&quot;
@@ -624,7 +638,9 @@ res_json</code></pre>
 ## [1] 0
 ## 
 ## $prods[[9]]$couponActid
-## list()
+## $prods[[9]]$couponActid[[1]]
+## [1] &quot;C012737&quot;
+## 
 ## 
 ## $prods[[9]]$BU
 ## [1] &quot;ec&quot;
@@ -632,28 +648,28 @@ res_json</code></pre>
 ## 
 ## $prods[[10]]
 ## $prods[[10]]$Id
-## [1] &quot;QAANHH-A9009BQZ2&quot;
+## [1] &quot;DYAL6U-19009H52B&quot;
 ## 
 ## $prods[[10]]$cateId
-## [1] &quot;QAANHH&quot;
+## [1] &quot;DYAL6U&quot;
 ## 
 ## $prods[[10]]$picS
-## [1] &quot;/items/QAANHHA9009BQZ2/000002_1534503414.jpg&quot;
+## [1] &quot;/items/DYAL6U19009H52B/000002_1539247168.jpg&quot;
 ## 
 ## $prods[[10]]$picB
-## [1] &quot;/items/QAANHHA9009BQZ2/000001_1534503414.jpg&quot;
+## [1] &quot;/items/DYAL6U19009H52B/000001_1539247168.jpg&quot;
 ## 
 ## $prods[[10]]$name
-## [1] &quot;Samsung Galaxy Note 9 (6G/128G)&quot;
+## [1] &quot;Samsung Galaxy Note 9 (6G/128G)-湛海藍&quot;
 ## 
 ## $prods[[10]]$describe
-## [1] &quot;★【贈9H玻璃貼+防摔空壓殼】★Samsung Galaxy Note 9 (6G/128G)\\r\\n●6.4吋無邊際全螢幕 \r\n●f1.5+f2.4日夜雙光圈 \r\n●雙鏡頭ois光學防手震 \r\n●6g ram 128 rom \r\n●4000mah升級大電量 \r\n●s pen遠端操控功能&quot;
+## [1] &quot;6G/128G湛海藍★送原廠無線充電盤+一年延長保Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益\r\n\r\n選購其他顏色\r\n●湛海藍\r\n●霧金銅\r\n●薰衣紫&quot;
 ## 
 ## $prods[[10]]$price
-## [1] 28590
+## [1] 29900
 ## 
 ## $prods[[10]]$originPrice
-## [1] 28590
+## [1] 29900
 ## 
 ## $prods[[10]]$author
 ## [1] &quot;&quot;
@@ -674,7 +690,9 @@ res_json</code></pre>
 ## [1] 0
 ## 
 ## $prods[[10]]$couponActid
-## list()
+## $prods[[10]]$couponActid[[1]]
+## [1] &quot;C012737&quot;
+## 
 ## 
 ## $prods[[10]]$BU
 ## [1] &quot;ec&quot;
@@ -682,28 +700,28 @@ res_json</code></pre>
 ## 
 ## $prods[[11]]
 ## $prods[[11]]$Id
-## [1] &quot;DYAL6U-19009GV06&quot;
+## [1] &quot;DYAGEN-A90098C90&quot;
 ## 
 ## $prods[[11]]$cateId
-## [1] &quot;DYAL6V&quot;
+## [1] &quot;DYAGEN&quot;
 ## 
 ## $prods[[11]]$picS
-## [1] &quot;/items/DYAL6U19009GV06/000002_1538981815.jpg&quot;
+## [1] &quot;/items/DYAGENA90098C90/000002_1531986893.jpg&quot;
 ## 
 ## $prods[[11]]$picB
-## [1] &quot;/items/DYAL6U19009GV06/000001_1538996607.jpg&quot;
+## [1] &quot;/items/DYAGENA90098C90/000001_1531986893.jpg&quot;
 ## 
 ## $prods[[11]]$name
-## [1] &quot;Samsung Galaxy Note 9 (8G/512G)&quot;
+## [1] &quot;Samsung 三星 Galaxy Note 9 吸震緩衝防摔透明背蓋手機殼&quot;
 ## 
 ## $prods[[11]]$describe
-## [1] &quot;★搭配Office 365+一年延長保固★Samsung Galaxy Note 9 (8G/512G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●8g ram 512 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益\r\n\r\nsamsung pay上線 好禮三重享\r\n\r\n↑活動詳情請點圖片了解\r\n\r\n\r\n搭配office 365 個人版中文pkc(無光碟)&quot;
+## [1] &quot;Samsung 三星 Galaxy Note 9 吸震緩衝防摔透明背蓋手機殼 ATO 防花PC透明背蓋 + TPU防撞邊框 手機殼\\r\\n二合一透明手機殼。光學級pc背板，拜爾tpu複合工藝\r\n\r\n● 防撞擊緩衝設計\r\n● 四角凸起防護\r\n● 獨立tpu鏡頭軟膠保護\r\n● 輕觸按鍵裸機手感\r\n● tpu軟膠邊框\r\n● 防花pc鏡片視窗級透光率\r\n● 防指紋、油污、水印\r\nsamsung 三星 galaxy note 9 適用\r\n\r\n\r\n【ato select】note 9熱賣保護殼\r\n◆ 強化玻璃背蓋防爆手機殼\t   \r\n◆ 碳纖維防撞保護殼\t   \r\n◆ 經典bv編織防撞保護殼\t   \r\n◆ 透明空壓防撞防摔保護殼\t   \r\n◆ 指環支架磁吸防撞保護殼\t   \r\n◆ 兩用隱形支架防撞保護殼&quot;
 ## 
 ## $prods[[11]]$price
-## [1] 38900
+## [1] 590
 ## 
 ## $prods[[11]]$originPrice
-## [1] 38900
+## [1] 590
 ## 
 ## $prods[[11]]$author
 ## [1] &quot;&quot;
@@ -732,28 +750,28 @@ res_json</code></pre>
 ## 
 ## $prods[[12]]
 ## $prods[[12]]$Id
-## [1] &quot;DYAGEN-A90098TAA&quot;
+## [1] &quot;QAANHH-A9009BQZ2&quot;
 ## 
 ## $prods[[12]]$cateId
-## [1] &quot;DYAGEN&quot;
+## [1] &quot;QAANHH&quot;
 ## 
 ## $prods[[12]]$picS
-## [1] &quot;/items/DYAGENA90098TAA/000002_1535440712.jpg&quot;
+## [1] &quot;/items/QAANHHA9009BQZ2/000002_1534503414.jpg&quot;
 ## 
 ## $prods[[12]]$picB
-## [1] &quot;/items/DYAGENA90098TAA/000001_1538990016.jpg&quot;
+## [1] &quot;/items/QAANHHA9009BQZ2/000001_1534503414.jpg&quot;
 ## 
 ## $prods[[12]]$name
-## [1] &quot;Tech21 英國超衝擊 Evo Check Samsung Note 9 防撞軟質格紋保護殼 - 透黑&quot;
+## [1] &quot;Samsung Galaxy Note 9 (6G/128G)&quot;
 ## 
 ## $prods[[12]]$describe
-## [1] &quot;▼每日強檔‧瘋殺特賣▼買就送Haagen-Dazs冰淇淋卷Tech21 英國超衝擊 Evo Check Samsung Note 9 防撞軟質格紋保護殼 - 透黑\\r\\n《限時狂降★週四10點回價》 \r\n開始﹕１０／０９(星期二)１０：００  \r\n結束﹕１０／１１(星期四)１０：００\r\n網路價$１４８０．\r\n活動價↘$８８８\r\n●flexshock 混和式材質可以吸收、排除、抵消衝擊力道 \r\n●超輕量且超薄的結構，完整包覆，提供安全貼合與質感 \r\n●隆起的螢幕邊框添增保護 \r\n●100%適用於所有按鍵、接口和功能 \r\n●英國銷售排行第一配件品牌\r\n\r\n『engadget 專欄報導』\r\n『歡迎加入fb粉絲團』\r\n選購其他款式：\r\nsamsung note 5 \r\n『evo check 防撞軟質保護套』\r\n透黑│透白\r\n『evo wallet  防撞軟質皮套』\r\n『防撞抗刮修復保護貼』\r\n\r\nsamsung note 8 \r\n『evo check 防撞軟質保護套』\r\n透黑│透白\r\n『pure clear 防撞硬式清透保護殼』\r\n\r\n\r\n『tech21全系列商品』\r\napple  \r\nandroid \r\n\r\n館長小叮嚀：儲值購買最划算～\r\n【週2限定】刷指定卡買8 000儲值金\r\n送300刷卡金+260加碼金→最高回饋560(=7%)↑10月儲值優惠活動，請點我\r\n\r\n10月刷卡優惠 限量需登錄\r\n↑銀行刷卡活動詳情請點圖片了解&quot;
+## [1] &quot;★【贈9H玻璃貼+防摔空壓殼】★Samsung Galaxy Note 9 (6G/128G)\\r\\n●6.4吋無邊際全螢幕 \r\n●f1.5+f2.4日夜雙光圈 \r\n●雙鏡頭ois光學防手震 \r\n●6g ram 128 rom \r\n●4000mah升級大電量 \r\n●s pen遠端操控功能&quot;
 ## 
 ## $prods[[12]]$price
-## [1] 888
+## [1] 28590
 ## 
 ## $prods[[12]]$originPrice
-## [1] 888
+## [1] 28590
 ## 
 ## $prods[[12]]$author
 ## [1] &quot;&quot;
@@ -782,28 +800,28 @@ res_json</code></pre>
 ## 
 ## $prods[[13]]
 ## $prods[[13]]$Id
-## [1] &quot;DYAGEN-A9009AXDA&quot;
+## [1] &quot;DYAG0X-A9009BIK8&quot;
 ## 
 ## $prods[[13]]$cateId
-## [1] &quot;DYAGEN&quot;
+## [1] &quot;DYAG0X&quot;
 ## 
 ## $prods[[13]]$picS
-## [1] &quot;/items/DYAGENA9009AXDA/000002_1533895110.jpg&quot;
+## [1] &quot;/items/DYAG0XA9009BIK8/000002_1535166006.jpg&quot;
 ## 
 ## $prods[[13]]$picB
-## [1] &quot;/items/DYAGENA9009AXDA/000001_1533895110.jpg&quot;
+## [1] &quot;/items/DYAG0XA9009BIK8/000001_1535166006.jpg&quot;
 ## 
 ## $prods[[13]]$name
-## [1] &quot;VRS Design 三星 Galaxy Note9 Crystal Bumper 軍規 雙層 透明 邊框 耐衝擊 防撞 防摔 手機殼&quot;
+## [1] &quot;SAMSUNG Galaxy Note 9全透視感應皮套(立架式)-藍&quot;
 ## 
 ## $prods[[13]]$describe
-## [1] &quot;★Note9 韓國原廠指定防摔首選第一保護殼★VRS 韓國銷售第一選擇\\r\\nnote9 韓國原廠指定防摔首選第一保護殼\r\n●保護殼採用簡易安裝，軍規級認證。\r\n●雙層軍規防撞殼，一層pc硬殼內部一層tpu緩衝材質。\r\n●保護殼有專用設計高出 note9 螢幕0.2mm\r\n●軍規測試，落地120cm，無損傷。\r\n●韓國製造，品質有保證。\r\n\r\n&lt;U+0001F4E2&gt;其他爆款 note9 專業手機殼：\r\n◆likgus note 9 全透明裸機質感防摔殼\r\n◆vrs note9 crystal bumper 雙層 防摔防撞 \r\n◆vrs note9 high pro shield 軍規 耐衝擊\r\n◆vrs note9 damda glide 實用 卡片收納 \r\n◆vrs note 9 single fit label 直紋 緩衝抗震\r\n◆vrs note 9 crystal fit label 軟殼 透明直紋 \r\n&lt;U+0001F4E2&gt;爆款熱銷生活用品：\r\n◆迷你真空機 vacuum valve 食物保鮮\r\n&lt;U+0001F4E2&gt;選購其他note9專用線材：\r\n◆rival type-c usb 20cm\r\n◆rival type-c usb 100cm\r\n◆rival type-c usb 200cm\r\n\r\n限時價↘890，目前人搶購&quot;
+## [1] &quot;SAMSUNG Galaxy Note 9全透視感應皮套(立架式)-藍\\r\\n不須打開皮套即可接聽電話、查看通知\r\n三種角度隨心變換，自拍、看影片都便利&quot;
 ## 
 ## $prods[[13]]$price
-## [1] 890
+## [1] 1890
 ## 
 ## $prods[[13]]$originPrice
-## [1] 890
+## [1] 1890
 ## 
 ## $prods[[13]]$author
 ## [1] &quot;&quot;
@@ -832,28 +850,28 @@ res_json</code></pre>
 ## 
 ## $prods[[14]]
 ## $prods[[14]]$Id
-## [1] &quot;DYAGEN-A9009BIZ7&quot;
+## [1] &quot;DYAGEN-A9009AXDA&quot;
 ## 
 ## $prods[[14]]$cateId
 ## [1] &quot;DYAGEN&quot;
 ## 
 ## $prods[[14]]$picS
-## [1] &quot;/items/DYAGENA9009BIZ7/000002_1538013693.jpg&quot;
+## [1] &quot;/items/DYAGENA9009AXDA/000002_1533895110.jpg&quot;
 ## 
 ## $prods[[14]]$picB
-## [1] &quot;/items/DYAGENA9009BIZ7/000001_1538013693.jpg&quot;
+## [1] &quot;/items/DYAGENA9009AXDA/000001_1533895110.jpg&quot;
 ## 
 ## $prods[[14]]$name
-## [1] &quot;【Rearth Ringke】三星 Galaxy Note 9 [Fusion] 透明背蓋防撞手機殼&quot;
+## [1] &quot;VRS Design 三星 Galaxy Note9 Crystal Bumper 軍規 雙層 透明 邊框 耐衝擊 防撞 防摔 手機殼&quot;
 ## 
 ## $prods[[14]]$describe
-## [1] &quot;三星 Galaxy Note 9Ringke Fusion 透明PC防刮背蓋 + TPU防摔防撞邊框 手機保護殼\\r\\n熱銷單品 透明背蓋 簡約防護有效防摔、防撞、防刮傷\r\n\r\n● 網路購物高人氣商品，客戶滿意度最高 \r\n● 吊繩孔設計，兼具美觀與功能性 \r\n● pc硬質背蓋 +tpu軟質邊框\r\n● 通過美國軍規防摔測試 \r\n● samsung 三星 galaxy note 9 專用\r\n● 本產品不含手掛繩\r\n\r\n更多款式請到 ringke 品牌館→\r\n\r\n【rearth ringke】note 9 保護殼\r\n◆ 【rearth ringke】  wave  流線型雙層邊框防撞手機殼\t   \r\n◆ 【rearth ringke】  onyx  防撞緩衝手機殼\t   \r\n◆ 【rearth ringke】  fusion x  透明背蓋防撞手機殼&quot;
+## [1] &quot;★Note9 韓國原廠指定防摔首選第一保護殼★VRS 韓國銷售第一選擇\\r\\nnote9 韓國原廠指定防摔首選第一保護殼\r\n●保護殼採用簡易安裝，軍規級認證。\r\n●雙層軍規防撞殼，一層pc硬殼內部一層tpu緩衝材質。\r\n●保護殼有專用設計高出 note9 螢幕0.2mm\r\n●軍規測試，落地120cm，無損傷。\r\n●韓國製造，品質有保證。\r\n\r\n&lt;U+0001F4E2&gt;其他爆款 note9 專業手機殼：\r\n◆likgus note 9 全透明裸機質感防摔殼\r\n◆vrs note9 crystal bumper 雙層 防摔防撞 \r\n◆vrs note9 high pro shield 軍規 耐衝擊\r\n◆vrs note9 damda glide 實用 卡片收納 \r\n◆vrs note 9 single fit label 直紋 緩衝抗震\r\n◆vrs note 9 crystal fit label 軟殼 透明直紋 \r\n&lt;U+0001F4E2&gt;爆款熱銷生活用品：\r\n◆迷你真空機 vacuum valve 食物保鮮\r\n&lt;U+0001F4E2&gt;選購其他note9專用線材：\r\n◆rival type-c usb 20cm\r\n◆rival type-c usb 100cm\r\n◆rival type-c usb 200cm\r\n\r\n限時價↘890，目前人搶購&quot;
 ## 
 ## $prods[[14]]$price
-## [1] 490
+## [1] 890
 ## 
 ## $prods[[14]]$originPrice
-## [1] 490
+## [1] 890
 ## 
 ## $prods[[14]]$author
 ## [1] &quot;&quot;
@@ -882,28 +900,28 @@ res_json</code></pre>
 ## 
 ## $prods[[15]]
 ## $prods[[15]]$Id
-## [1] &quot;DYAGEN-A90098C90&quot;
+## [1] &quot;DYAGEN-A9009DJ2E&quot;
 ## 
 ## $prods[[15]]$cateId
 ## [1] &quot;DYAGEN&quot;
 ## 
 ## $prods[[15]]$picS
-## [1] &quot;/items/DYAGENA90098C90/000002_1531986893.jpg&quot;
+## [1] &quot;/items/DYAGENA9009DJ2E/000002_1535945518.jpg&quot;
 ## 
 ## $prods[[15]]$picB
-## [1] &quot;/items/DYAGENA90098C90/000001_1531986893.jpg&quot;
+## [1] &quot;/items/DYAGENA9009DJ2E/000001_1535945518.jpg&quot;
 ## 
 ## $prods[[15]]$name
-## [1] &quot;Samsung 三星 Galaxy Note 9 吸震緩衝防摔透明背蓋手機殼&quot;
+## [1] &quot;犀牛盾SolidSuit碳纖維防摔背蓋手機殼 for Note 9 黑色&quot;
 ## 
 ## $prods[[15]]$describe
-## [1] &quot;Samsung 三星 Galaxy Note 9 吸震緩衝防摔透明背蓋手機殼 ATO 防花PC透明背蓋 + TPU防撞邊框 手機殼\\r\\n二合一透明手機殼。光學級pc背板，拜爾tpu複合工藝\r\n\r\n● 防撞擊緩衝設計\r\n● 四角凸起防護\r\n● 獨立tpu鏡頭軟膠保護\r\n● 輕觸按鍵裸機手感\r\n● tpu軟膠邊框\r\n● 防花pc鏡片視窗級透光率\r\n● 防指紋、油污、水印\r\nsamsung 三星 galaxy note 9 適用\r\n\r\n\r\n【ato select】note 9熱賣保護殼\r\n◆ 強化玻璃背蓋防爆手機殼\t   \r\n◆ 碳纖維防撞保護殼\t   \r\n◆ 經典bv編織防撞保護殼\t   \r\n◆ 透明空壓防撞防摔保護殼\t   \r\n◆ 指環支架磁吸防撞保護殼\t   \r\n◆ 兩用隱形支架防撞保護殼&quot;
+## [1] &quot;㊣犀牛盾◆黑色犀牛盾 SolidSuit 碳纖維防摔背蓋手機殼Note 9 黑色\\r\\n經典鉅獻\r\nsolidsuit防摔殼為手機殼創造一層新價值。\r\n一體成形的手機殼採用犀牛盾獨家材料shockspread&lt;U+2122&gt;製成。\r\n為你的手機殼背蓋添上匠心獨運的手感設計 。 \r\n\r\n碳纖維\r\n-體驗碳纖令人驚異的美感同時又不干涉訊號\r\n-特殊的啞光表皮不僅防刮更完美提升絕對的抓力\r\n\r\n超越軍規標準獨家蜂巢結構開孔加大增高邊緣設計堅韌材料食品安全等級100%可回收極度輕薄&quot;
 ## 
 ## $prods[[15]]$price
-## [1] 590
+## [1] 830
 ## 
 ## $prods[[15]]$originPrice
-## [1] 590
+## [1] 830
 ## 
 ## $prods[[15]]$author
 ## [1] &quot;&quot;
@@ -932,28 +950,28 @@ res_json</code></pre>
 ## 
 ## $prods[[16]]
 ## $prods[[16]]$Id
-## [1] &quot;DYAG0X-A9009BIK8&quot;
+## [1] &quot;DYAL6U-19009GV2Q&quot;
 ## 
 ## $prods[[16]]$cateId
-## [1] &quot;DYAG0X&quot;
+## [1] &quot;DYAL6V&quot;
 ## 
 ## $prods[[16]]$picS
-## [1] &quot;/items/DYAG0XA9009BIK8/000002_1535166006.jpg&quot;
+## [1] &quot;/items/DYAL6U19009GV2Q/000002_1538982378.jpg&quot;
 ## 
 ## $prods[[16]]$picB
-## [1] &quot;/items/DYAG0XA9009BIK8/000001_1535166006.jpg&quot;
+## [1] &quot;/items/DYAL6U19009GV2Q/000001_1539053849.jpg&quot;
 ## 
 ## $prods[[16]]$name
-## [1] &quot;SAMSUNG Galaxy Note 9全透視感應皮套(立架式)-藍&quot;
+## [1] &quot;Samsung Galaxy Note 9 (8G/512G)&quot;
 ## 
 ## $prods[[16]]$describe
-## [1] &quot;SAMSUNG Galaxy Note 9全透視感應皮套(立架式)-藍\\r\\n不須打開皮套即可接聽電話、查看通知\r\n三種角度隨心變換，自拍、看影片都便利&quot;
+## [1] &quot;★送三星24型PLS寬螢幕+Office 365+一年延長保★Samsung Galaxy Note 9 (8G/512G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●8g ram 512 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益\r\n\r\nsamsung pay上線 好禮三重享\r\n\r\n↑活動詳情請點圖片了解&quot;
 ## 
 ## $prods[[16]]$price
-## [1] 1890
+## [1] 39900
 ## 
 ## $prods[[16]]$originPrice
-## [1] 1890
+## [1] 39900
 ## 
 ## $prods[[16]]$author
 ## [1] &quot;&quot;
@@ -982,28 +1000,28 @@ res_json</code></pre>
 ## 
 ## $prods[[17]]
 ## $prods[[17]]$Id
-## [1] &quot;DYAGEN-A9009C4LD&quot;
+## [1] &quot;DYAG0X-A9009AUCK&quot;
 ## 
 ## $prods[[17]]$cateId
-## [1] &quot;DYAGEN&quot;
+## [1] &quot;DYAG0X&quot;
 ## 
 ## $prods[[17]]$picS
-## [1] &quot;/items/DYAGENA9009C4LD/000002_1538462734.jpg&quot;
+## [1] &quot;/items/DYAG0XA9009AUCK/000002_1533871193.jpg&quot;
 ## 
 ## $prods[[17]]$picB
-## [1] &quot;/items/DYAGENA9009C4LD/000001_1538462734.jpg&quot;
+## [1] &quot;/items/DYAG0XA9009AUCK/000001_1533871193.jpg&quot;
 ## 
 ## $prods[[17]]$name
-## [1] &quot;ESR億色 Samsung Galaxy Note 9手機殼 全包邊玻璃防摔手機殼 冰晶琉璃系列&quot;
+## [1] &quot;Samsung Galaxy Note9 原廠全透視感應皮套(立架式)&quot;
 ## 
 ## $prods[[17]]$describe
-## [1] &quot;ESR億色 Samsung Galaxy Note 9手機殼 全包邊玻璃防摔手機殼 冰晶琉璃系列\\r\\n※適用於galaxy note 9手機 \r\n※6d玻璃殼 高透清晰 \r\n※玻璃硬度9h \r\n※質感輕盈 裸機手感 \r\n※四角加厚 加強防摔保護 \r\n※柔軟邊框 不傷手機 \r\n※帶殼也支持無線充電 \r\n※嚴選拜耳材質 不易褪色&quot;
+## [1] &quot;代理商公司貨Samsung Galaxy Note9 原廠全透視感應皮套(立架式)\\r\\n＊原廠高品質\r\n＊與 note9 完美結合\r\n＊輕薄、精緻、時尚設計&quot;
 ## 
 ## $prods[[17]]$price
-## [1] 590
+## [1] 1890
 ## 
 ## $prods[[17]]$originPrice
-## [1] 590
+## [1] 1890
 ## 
 ## $prods[[17]]$author
 ## [1] &quot;&quot;
@@ -1032,28 +1050,28 @@ res_json</code></pre>
 ## 
 ## $prods[[18]]
 ## $prods[[18]]$Id
-## [1] &quot;DYAGEN-A9009DJ2E&quot;
+## [1] &quot;DYAGEN-A9009C4LD&quot;
 ## 
 ## $prods[[18]]$cateId
 ## [1] &quot;DYAGEN&quot;
 ## 
 ## $prods[[18]]$picS
-## [1] &quot;/items/DYAGENA9009DJ2E/000002_1535945518.jpg&quot;
+## [1] &quot;/items/DYAGENA9009C4LD/000002_1538462734.jpg&quot;
 ## 
 ## $prods[[18]]$picB
-## [1] &quot;/items/DYAGENA9009DJ2E/000001_1535945518.jpg&quot;
+## [1] &quot;/items/DYAGENA9009C4LD/000001_1538462734.jpg&quot;
 ## 
 ## $prods[[18]]$name
-## [1] &quot;犀牛盾SolidSuit碳纖維防摔背蓋手機殼 for Note 9 黑色&quot;
+## [1] &quot;ESR億色 Samsung Galaxy Note 9手機殼 全包邊玻璃防摔手機殼 冰晶琉璃系列&quot;
 ## 
 ## $prods[[18]]$describe
-## [1] &quot;㊣犀牛盾◆黑色犀牛盾 SolidSuit 碳纖維防摔背蓋手機殼Note 9 黑色\\r\\n經典鉅獻\r\nsolidsuit防摔殼為手機殼創造一層新價值。\r\n一體成形的手機殼採用犀牛盾獨家材料shockspread&lt;U+2122&gt;製成。\r\n為你的手機殼背蓋添上匠心獨運的手感設計 。 \r\n\r\n碳纖維\r\n-體驗碳纖令人驚異的美感同時又不干涉訊號\r\n-特殊的啞光表皮不僅防刮更完美提升絕對的抓力\r\n\r\n超越軍規標準獨家蜂巢結構開孔加大增高邊緣設計堅韌材料食品安全等級100%可回收極度輕薄&quot;
+## [1] &quot;ESR億色 Samsung Galaxy Note 9手機殼 全包邊玻璃防摔手機殼 冰晶琉璃系列\\r\\n※適用於galaxy note 9手機 \r\n※6d玻璃殼 高透清晰 \r\n※玻璃硬度9h \r\n※質感輕盈 裸機手感 \r\n※四角加厚 加強防摔保護 \r\n※柔軟邊框 不傷手機 \r\n※帶殼也支持無線充電 \r\n※嚴選拜耳材質 不易褪色&quot;
 ## 
 ## $prods[[18]]$price
-## [1] 830
+## [1] 590
 ## 
 ## $prods[[18]]$originPrice
-## [1] 830
+## [1] 590
 ## 
 ## $prods[[18]]$author
 ## [1] &quot;&quot;
@@ -1082,28 +1100,28 @@ res_json</code></pre>
 ## 
 ## $prods[[19]]
 ## $prods[[19]]$Id
-## [1] &quot;DYAL6U-A9009BYVV&quot;
+## [1] &quot;DYAG0X-A9009BIJO&quot;
 ## 
 ## $prods[[19]]$cateId
-## [1] &quot;DYAL6U&quot;
+## [1] &quot;DYAG0X&quot;
 ## 
 ## $prods[[19]]$picS
-## [1] &quot;/items/DYAL6UA9009BYVV/000002_1535081121.jpg&quot;
+## [1] &quot;/items/DYAG0XA9009BIJO/000002_1538966053.jpg&quot;
 ## 
 ## $prods[[19]]$picB
-## [1] &quot;/items/DYAL6UA9009BYVV/000001_1535081121.jpg&quot;
+## [1] &quot;/items/DYAG0XA9009BIJO/000001_1538966053.jpg&quot;
 ## 
 ## $prods[[19]]$name
-## [1] &quot;Samsung Galaxy Note 9 (6G/128G)-霧金銅&quot;
+## [1] &quot;SAMSUNG Galaxy Note9全透視感應皮套(立架式)-紫&quot;
 ## 
 ## $prods[[19]]$describe
-## [1] &quot;6G/128G霧金銅★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益&quot;
+## [1] &quot;SAMSUNG Galaxy Note9全透視感應皮套(立架式)-紫\\r\\n不須打開皮套即可接聽電話、查看通知\r\n三種角度隨心變換，自拍、看影片都便利\r\n館長小叮嚀：儲值購買最划算～\r\n【週567限定】刷指定卡買5 000儲值金\r\n送250刷卡金+140加碼金→最高回饋390(=7.8%)↑10月儲值優惠活動，請點我\r\n\r\n10月刷卡優惠 限量需登錄\r\n↑銀行刷卡活動詳情請點圖片了解&quot;
 ## 
 ## $prods[[19]]$price
-## [1] 31500
+## [1] 1890
 ## 
 ## $prods[[19]]$originPrice
-## [1] 31500
+## [1] 1890
 ## 
 ## $prods[[19]]$author
 ## [1] &quot;&quot;
@@ -1132,28 +1150,28 @@ res_json</code></pre>
 ## 
 ## $prods[[20]]
 ## $prods[[20]]$Id
-## [1] &quot;DYAQ1P-A90095D8J&quot;
+## [1] &quot;DYAL6U-A9009BYVV&quot;
 ## 
 ## $prods[[20]]$cateId
-## [1] &quot;DYAQ1P&quot;
+## [1] &quot;DYAL6U&quot;
 ## 
 ## $prods[[20]]$picS
-## [1] &quot;/items/DYAQ1PA90095D8J/000002_1529645044.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009BYVV/000002_1535081121.jpg&quot;
 ## 
 ## $prods[[20]]$picB
-## [1] &quot;/items/DYAQ1PA90095D8J/000001_1529645044.jpg&quot;
+## [1] &quot;/items/DYAL6UA9009BYVV/000001_1535081121.jpg&quot;
 ## 
 ## $prods[[20]]$name
-## [1] &quot;SAMSUNG Galaxy Note8 Note9 AKG原廠 雙耳立體聲耳機&quot;
+## [1] &quot;Samsung Galaxy Note 9 (6G/128G)-霧金銅&quot;
 ## 
 ## $prods[[20]]$describe
-## [1] &quot;SAMSUNG Galaxy Note8 Note9 AKG原廠 雙耳立體聲耳機\\r\\n★原廠出品，品質保證★\r\n&lt;U+25AA&gt;akg samsung原廠耳機 專屬於你的悅耳音效\r\n&lt;U+25AA&gt;採用雙耳立體聲耳機 適用安卓 3.5mm 接頭規格  \r\n&lt;U+25AA&gt;採用符合人體工學的設計及人體工學耳廓矽膠耳塞\r\n&lt;U+25AA&gt;奈米編織線防纏繞設計 防拉防纏繞給您完美體驗\r\n&lt;U+25AA&gt;仿造劇院建築聲學設計 航太級超薄振膜原音重現&quot;
+## [1] &quot;6G/128G霧金銅★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n\r\n★舊換新限時加碼最高折$21800!!舊換新登錄由此go~\r\n\r\n●6.4吋無邊際全螢幕\r\n●f1.5+f2.4日夜雙光圈\r\n●雙鏡頭ois光學防手震\r\n●6g ram 128 rom\r\n●4000mah升級大電量\r\n●s pen遠端操控功能\r\n※請在審閱期後再做延保卡註冊動作，以免影響客戶的退貨權益&quot;
 ## 
 ## $prods[[20]]$price
-## [1] 580
+## [1] 30900
 ## 
 ## $prods[[20]]$originPrice
-## [1] 580
+## [1] 30900
 ## 
 ## $prods[[20]]$author
 ## [1] &quot;&quot;
@@ -1174,148 +1192,150 @@ res_json</code></pre>
 ## [1] 0
 ## 
 ## $prods[[20]]$couponActid
-## list()
+## $prods[[20]]$couponActid[[1]]
+## [1] &quot;C012737&quot;
+## 
 ## 
 ## $prods[[20]]$BU
 ## [1] &quot;ec&quot;</code></pre>
 <pre class="r"><code>do.call(rbind,res_json$prods)</code></pre>
 <pre><code>##       Id                 cateId  
 ##  [1,] &quot;DYAL6U-19009EGQN&quot; &quot;DYAL6U&quot;
-##  [2,] &quot;DYAL6U-A9009BBGC&quot; &quot;DYAL6V&quot;
-##  [3,] &quot;DYAL6U-A9009G95N&quot; &quot;DYAL6V&quot;
+##  [2,] &quot;DYAL6U-A9009G95N&quot; &quot;DYAL6V&quot;
+##  [3,] &quot;DYAL6U-A9009BBGC&quot; &quot;DYAL6V&quot;
 ##  [4,] &quot;DYAL6U-19009CYSZ&quot; &quot;DYAL6U&quot;
 ##  [5,] &quot;DYAL6U-19009EGXD&quot; &quot;DYAL6U&quot;
-##  [6,] &quot;DYAL6U-A9009CPZ9&quot; &quot;DYAL6A&quot;
-##  [7,] &quot;DYAL6U-A9009BBFK&quot; &quot;DYAL6U&quot;
-##  [8,] &quot;DYAL6U-A9009BYWE&quot; &quot;DYAL6U&quot;
-##  [9,] &quot;DYAL6U-A9009BYYL&quot; &quot;DYAL6U&quot;
-## [10,] &quot;QAANHH-A9009BQZ2&quot; &quot;QAANHH&quot;
-## [11,] &quot;DYAL6U-19009GV06&quot; &quot;DYAL6V&quot;
-## [12,] &quot;DYAGEN-A90098TAA&quot; &quot;DYAGEN&quot;
-## [13,] &quot;DYAGEN-A9009AXDA&quot; &quot;DYAGEN&quot;
-## [14,] &quot;DYAGEN-A9009BIZ7&quot; &quot;DYAGEN&quot;
-## [15,] &quot;DYAGEN-A90098C90&quot; &quot;DYAGEN&quot;
-## [16,] &quot;DYAG0X-A9009BIK8&quot; &quot;DYAG0X&quot;
-## [17,] &quot;DYAGEN-A9009C4LD&quot; &quot;DYAGEN&quot;
-## [18,] &quot;DYAGEN-A9009DJ2E&quot; &quot;DYAGEN&quot;
-## [19,] &quot;DYAL6U-A9009BYVV&quot; &quot;DYAL6U&quot;
-## [20,] &quot;DYAQ1P-A90095D8J&quot; &quot;DYAQ1P&quot;
+##  [6,] &quot;DYAL6U-A9009BYWE&quot; &quot;DYAL6U&quot;
+##  [7,] &quot;DYAL6U-A9009CPZ9&quot; &quot;DYAL6A&quot;
+##  [8,] &quot;DYAL6U-A9009BYYL&quot; &quot;DYAL6U&quot;
+##  [9,] &quot;DYAL6U-A9009BBFK&quot; &quot;DYAL6U&quot;
+## [10,] &quot;DYAL6U-19009H52B&quot; &quot;DYAL6U&quot;
+## [11,] &quot;DYAGEN-A90098C90&quot; &quot;DYAGEN&quot;
+## [12,] &quot;QAANHH-A9009BQZ2&quot; &quot;QAANHH&quot;
+## [13,] &quot;DYAG0X-A9009BIK8&quot; &quot;DYAG0X&quot;
+## [14,] &quot;DYAGEN-A9009AXDA&quot; &quot;DYAGEN&quot;
+## [15,] &quot;DYAGEN-A9009DJ2E&quot; &quot;DYAGEN&quot;
+## [16,] &quot;DYAL6U-19009GV2Q&quot; &quot;DYAL6V&quot;
+## [17,] &quot;DYAG0X-A9009AUCK&quot; &quot;DYAG0X&quot;
+## [18,] &quot;DYAGEN-A9009C4LD&quot; &quot;DYAGEN&quot;
+## [19,] &quot;DYAG0X-A9009BIJO&quot; &quot;DYAG0X&quot;
+## [20,] &quot;DYAL6U-A9009BYVV&quot; &quot;DYAL6U&quot;
 ##       picS                                          
 ##  [1,] &quot;/items/DYAL6U19009EGQN/000002_1536629993.jpg&quot;
-##  [2,] &quot;/items/DYAL6UA9009BBGC/000002_1534246254.jpg&quot;
-##  [3,] &quot;/items/DYAL6UA9009G95N/000002_1538374422.jpg&quot;
+##  [2,] &quot;/items/DYAL6UA9009G95N/000002_1538374422.jpg&quot;
+##  [3,] &quot;/items/DYAL6UA9009BBGC/000002_1534246254.jpg&quot;
 ##  [4,] &quot;/items/DYAL6U19009CYSZ/000002_1535453214.jpg&quot;
 ##  [5,] &quot;/items/DYAL6U19009EGXD/000002_1536630143.jpg&quot;
-##  [6,] &quot;/items/DYAL6UA9009CPZ9/000002_1535529471.jpg&quot;
-##  [7,] &quot;/items/DYAL6UA9009BBFK/000002_1534246277.jpg&quot;
-##  [8,] &quot;/items/DYAL6UA9009BYWE/000002_1535081094.jpg&quot;
-##  [9,] &quot;/items/DYAL6UA9009BYYL/000002_1535081051.jpg&quot;
-## [10,] &quot;/items/QAANHHA9009BQZ2/000002_1534503414.jpg&quot;
-## [11,] &quot;/items/DYAL6U19009GV06/000002_1538981815.jpg&quot;
-## [12,] &quot;/items/DYAGENA90098TAA/000002_1535440712.jpg&quot;
-## [13,] &quot;/items/DYAGENA9009AXDA/000002_1533895110.jpg&quot;
-## [14,] &quot;/items/DYAGENA9009BIZ7/000002_1538013693.jpg&quot;
-## [15,] &quot;/items/DYAGENA90098C90/000002_1531986893.jpg&quot;
-## [16,] &quot;/items/DYAG0XA9009BIK8/000002_1535166006.jpg&quot;
-## [17,] &quot;/items/DYAGENA9009C4LD/000002_1538462734.jpg&quot;
-## [18,] &quot;/items/DYAGENA9009DJ2E/000002_1535945518.jpg&quot;
-## [19,] &quot;/items/DYAL6UA9009BYVV/000002_1535081121.jpg&quot;
-## [20,] &quot;/items/DYAQ1PA90095D8J/000002_1529645044.jpg&quot;
+##  [6,] &quot;/items/DYAL6UA9009BYWE/000002_1535081094.jpg&quot;
+##  [7,] &quot;/items/DYAL6UA9009CPZ9/000002_1535529471.jpg&quot;
+##  [8,] &quot;/items/DYAL6UA9009BYYL/000002_1535081051.jpg&quot;
+##  [9,] &quot;/items/DYAL6UA9009BBFK/000002_1534246277.jpg&quot;
+## [10,] &quot;/items/DYAL6U19009H52B/000002_1539247168.jpg&quot;
+## [11,] &quot;/items/DYAGENA90098C90/000002_1531986893.jpg&quot;
+## [12,] &quot;/items/QAANHHA9009BQZ2/000002_1534503414.jpg&quot;
+## [13,] &quot;/items/DYAG0XA9009BIK8/000002_1535166006.jpg&quot;
+## [14,] &quot;/items/DYAGENA9009AXDA/000002_1533895110.jpg&quot;
+## [15,] &quot;/items/DYAGENA9009DJ2E/000002_1535945518.jpg&quot;
+## [16,] &quot;/items/DYAL6U19009GV2Q/000002_1538982378.jpg&quot;
+## [17,] &quot;/items/DYAG0XA9009AUCK/000002_1533871193.jpg&quot;
+## [18,] &quot;/items/DYAGENA9009C4LD/000002_1538462734.jpg&quot;
+## [19,] &quot;/items/DYAG0XA9009BIJO/000002_1538966053.jpg&quot;
+## [20,] &quot;/items/DYAL6UA9009BYVV/000002_1535081121.jpg&quot;
 ##       picB                                          
 ##  [1,] &quot;/items/DYAL6U19009EGQN/000001_1538618146.jpg&quot;
-##  [2,] &quot;/items/DYAL6UA9009BBGC/000001_1538618548.jpg&quot;
-##  [3,] &quot;/items/DYAL6UA9009G95N/000001_1538996582.jpg&quot;
+##  [2,] &quot;/items/DYAL6UA9009G95N/000001_1539309519.jpg&quot;
+##  [3,] &quot;/items/DYAL6UA9009BBGC/000001_1538618548.jpg&quot;
 ##  [4,] &quot;/items/DYAL6U19009CYSZ/000001_1538618115.jpg&quot;
 ##  [5,] &quot;/items/DYAL6U19009EGXD/000001_1538618169.jpg&quot;
-##  [6,] &quot;/items/DYAL6UA9009CPZ9/000001_1535529471.jpg&quot;
-##  [7,] &quot;/items/DYAL6UA9009BBFK/000001_1536025058.jpg&quot;
-##  [8,] &quot;/items/DYAL6UA9009BYWE/000001_1535081094.jpg&quot;
-##  [9,] &quot;/items/DYAL6UA9009BYYL/000001_1535081051.jpg&quot;
-## [10,] &quot;/items/QAANHHA9009BQZ2/000001_1534503414.jpg&quot;
-## [11,] &quot;/items/DYAL6U19009GV06/000001_1538996607.jpg&quot;
-## [12,] &quot;/items/DYAGENA90098TAA/000001_1538990016.jpg&quot;
-## [13,] &quot;/items/DYAGENA9009AXDA/000001_1533895110.jpg&quot;
-## [14,] &quot;/items/DYAGENA9009BIZ7/000001_1538013693.jpg&quot;
-## [15,] &quot;/items/DYAGENA90098C90/000001_1531986893.jpg&quot;
-## [16,] &quot;/items/DYAG0XA9009BIK8/000001_1535166006.jpg&quot;
-## [17,] &quot;/items/DYAGENA9009C4LD/000001_1538462734.jpg&quot;
-## [18,] &quot;/items/DYAGENA9009DJ2E/000001_1535945518.jpg&quot;
-## [19,] &quot;/items/DYAL6UA9009BYVV/000001_1535081121.jpg&quot;
-## [20,] &quot;/items/DYAQ1PA90095D8J/000001_1529645044.jpg&quot;
+##  [6,] &quot;/items/DYAL6UA9009BYWE/000001_1535081094.jpg&quot;
+##  [7,] &quot;/items/DYAL6UA9009CPZ9/000001_1535529471.jpg&quot;
+##  [8,] &quot;/items/DYAL6UA9009BYYL/000001_1535081051.jpg&quot;
+##  [9,] &quot;/items/DYAL6UA9009BBFK/000001_1536025058.jpg&quot;
+## [10,] &quot;/items/DYAL6U19009H52B/000001_1539247168.jpg&quot;
+## [11,] &quot;/items/DYAGENA90098C90/000001_1531986893.jpg&quot;
+## [12,] &quot;/items/QAANHHA9009BQZ2/000001_1534503414.jpg&quot;
+## [13,] &quot;/items/DYAG0XA9009BIK8/000001_1535166006.jpg&quot;
+## [14,] &quot;/items/DYAGENA9009AXDA/000001_1533895110.jpg&quot;
+## [15,] &quot;/items/DYAGENA9009DJ2E/000001_1535945518.jpg&quot;
+## [16,] &quot;/items/DYAL6U19009GV2Q/000001_1539053849.jpg&quot;
+## [17,] &quot;/items/DYAG0XA9009AUCK/000001_1533871193.jpg&quot;
+## [18,] &quot;/items/DYAGENA9009C4LD/000001_1538462734.jpg&quot;
+## [19,] &quot;/items/DYAG0XA9009BIJO/000001_1538966053.jpg&quot;
+## [20,] &quot;/items/DYAL6UA9009BYVV/000001_1535081121.jpg&quot;
 ##       name                                                                                     
 ##  [1,] &quot;Samsung Galaxy Note 9 (6G/128G)-湛海藍&quot;                                                 
-##  [2,] &quot;Samsung Galaxy Note 9 (8G/512G)&quot;                                                        
-##  [3,] &quot;Samsung Galaxy Note 9 (8G/512G)-湛海藍&quot;                                                 
+##  [2,] &quot;Samsung Galaxy Note 9 (8G/512G)-湛海藍&quot;                                                 
+##  [3,] &quot;Samsung Galaxy Note 9 (8G/512G)&quot;                                                        
 ##  [4,] &quot;Samsung Galaxy Note 9 (6G/128G)-薰衣紫&quot;                                                 
 ##  [5,] &quot;Samsung Galaxy Note 9 (6G/128G)-霧金銅&quot;                                                 
-##  [6,] &quot;Samsung Galaxy Note 9 (6G/128G)&quot;                                                        
-##  [7,] &quot;Samsung Galaxy Note 9 (6G/128G)(黑色沙漠版)&quot;                                            
-##  [8,] &quot;Samsung Galaxy Note 9 (6G/128G)-湛海藍&quot;                                                 
-##  [9,] &quot;Samsung Galaxy Note 9 (6G/128G)-薰衣紫&quot;                                                 
-## [10,] &quot;Samsung Galaxy Note 9 (6G/128G)&quot;                                                        
-## [11,] &quot;Samsung Galaxy Note 9 (8G/512G)&quot;                                                        
-## [12,] &quot;Tech21 英國超衝擊 Evo Check Samsung Note 9 防撞軟質格紋保護殼 - 透黑&quot;                   
-## [13,] &quot;VRS Design 三星 Galaxy Note9 Crystal Bumper 軍規 雙層 透明 邊框 耐衝擊 防撞 防摔 手機殼&quot;
-## [14,] &quot;【Rearth Ringke】三星 Galaxy Note 9 [Fusion] 透明背蓋防撞手機殼&quot;                        
-## [15,] &quot;Samsung 三星 Galaxy Note 9 吸震緩衝防摔透明背蓋手機殼&quot;                                  
-## [16,] &quot;SAMSUNG Galaxy Note 9全透視感應皮套(立架式)-藍&quot;                                         
-## [17,] &quot;ESR億色 Samsung Galaxy Note 9手機殼 全包邊玻璃防摔手機殼 冰晶琉璃系列&quot;                  
-## [18,] &quot;犀牛盾SolidSuit碳纖維防摔背蓋手機殼 for Note 9 黑色&quot;                                    
-## [19,] &quot;Samsung Galaxy Note 9 (6G/128G)-霧金銅&quot;                                                 
-## [20,] &quot;SAMSUNG Galaxy Note8 Note9 AKG原廠 雙耳立體聲耳機&quot;                                      
-##       describe                                                                                                                
-##  [1,] &quot;6G/128G湛海藍★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登\xbf&quot; [truncated]    
-##  [2,] &quot;★送原廠皮套+Office 365+一年延長保★Samsung Galaxy Note 9 (8G/512G)\\r\\n↑10 01-11 30三星官網登錄送\xa6&quot; [truncated]     
-##  [3,] &quot;▼週慶優雅購★從容下單▼★送三星24型PLS寬螢幕+一年延長保固★★Samsung Galaxy Note 9 (8G/512G)\\r\\n《&quot; [truncated]           
-##  [4,] &quot;6G/128G薰衣紫★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登\xbf&quot; [truncated]    
-##  [5,] &quot;6G/128G霧金銅★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登\xbf&quot; [truncated]    
-##  [6,] &quot;★送配件購物金$2000+一年延長保固 ★(全新福利品) 贈原廠行電  SAMSUNG Galaxy Note 9 6G/128G 6.4吋八核&quot; [truncated]         
-##  [7,] &quot;黑色沙漠版★送Office 365+遊戲特製背蓋+超值虛寶★送一年延長保固Samsung Galaxy Note 9 (6G/128G)(黑色\xa8&quot; [truncated]      
-##  [8,] &quot;6G/128G湛海藍★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄\xb0&quot; [truncated]    
-##  [9,] &quot;6G/128G薰衣紫★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄\xb0&quot; [truncated]    
-## [10,] &quot;★【贈9H玻璃貼+防摔空壓殼】★Samsung Galaxy Note 9 (6G/128G)\\r\\n●6.4吋無邊際全螢幕 \r\n●f1.5+f2.4日&quot; [truncated]       
-## [11,] &quot;★搭配Office 365+一年延長保固★Samsung Galaxy Note 9 (8G/512G)\\r\\n↑10 01-11 30三星官網登錄送好禮\r\n&quot; [truncated]      
-## [12,] &quot;▼每日強檔‧瘋殺特賣▼買就送Haagen-Dazs冰淇淋卷Tech21 英國超衝擊 Evo Check Samsung Note 9 防撞軟質\xae&quot; [truncated]       
-## [13,] &quot;★Note9 韓國原廠指定防摔首選第一保護殼★VRS 韓國銷售第一選擇\\r\\nnote9 韓國原廠指定防摔首選第一保護\xb4&quot; [truncated]    
-## [14,] &quot;三星 Galaxy Note 9Ringke Fusion 透明PC防刮背蓋 + TPU防摔防撞邊框 手機保護殼\\r\\n熱銷單品 透明背蓋 簡&quot; [truncated]     
-## [15,] &quot;Samsung 三星 Galaxy Note 9 吸震緩衝防摔透明背蓋手機殼 ATO 防花PC透明背蓋 + TPU防撞邊框 手機殼\\r\\n二&quot; [truncated]     
-## [16,] &quot;SAMSUNG Galaxy Note 9全透視感應皮套(立架式)-藍\\r\\n不須打開皮套即可接聽電話、查看通知\r\n三種角度隨心\xc5&quot; [truncated]
-## [17,] &quot;ESR億色 Samsung Galaxy Note 9手機殼 全包邊玻璃防摔手機殼 冰晶琉璃系列\\r\\n※適用於galaxy note 9手機 &quot; [truncated]      
-## [18,] &quot;㊣犀牛盾◆黑色犀牛盾 SolidSuit 碳纖維防摔背蓋手機殼Note 9 黑色\\r\\n經典鉅獻\r\nsolidsuit防摔殼為手機殼&quot; [truncated]    
-## [19,] &quot;6G/128G霧金銅★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄\xb0&quot; [truncated]    
-## [20,] &quot;SAMSUNG Galaxy Note8 Note9 AKG原廠 雙耳立體聲耳機\\r\\n★原廠出品，品質保證★\r\n&lt;U+25AA&gt;akg samsung原\xbc&quot; [truncated]  
+##  [6,] &quot;Samsung Galaxy Note 9 (6G/128G)-湛海藍&quot;                                                 
+##  [7,] &quot;Samsung Galaxy Note 9 (6G/128G)&quot;                                                        
+##  [8,] &quot;Samsung Galaxy Note 9 (6G/128G)-薰衣紫&quot;                                                 
+##  [9,] &quot;Samsung Galaxy Note 9 (6G/128G)(黑色沙漠版)&quot;                                            
+## [10,] &quot;Samsung Galaxy Note 9 (6G/128G)-湛海藍&quot;                                                 
+## [11,] &quot;Samsung 三星 Galaxy Note 9 吸震緩衝防摔透明背蓋手機殼&quot;                                  
+## [12,] &quot;Samsung Galaxy Note 9 (6G/128G)&quot;                                                        
+## [13,] &quot;SAMSUNG Galaxy Note 9全透視感應皮套(立架式)-藍&quot;                                         
+## [14,] &quot;VRS Design 三星 Galaxy Note9 Crystal Bumper 軍規 雙層 透明 邊框 耐衝擊 防撞 防摔 手機殼&quot;
+## [15,] &quot;犀牛盾SolidSuit碳纖維防摔背蓋手機殼 for Note 9 黑色&quot;                                    
+## [16,] &quot;Samsung Galaxy Note 9 (8G/512G)&quot;                                                        
+## [17,] &quot;Samsung Galaxy Note9 原廠全透視感應皮套(立架式)&quot;                                        
+## [18,] &quot;ESR億色 Samsung Galaxy Note 9手機殼 全包邊玻璃防摔手機殼 冰晶琉璃系列&quot;                  
+## [19,] &quot;SAMSUNG Galaxy Note9全透視感應皮套(立架式)-紫&quot;                                          
+## [20,] &quot;Samsung Galaxy Note 9 (6G/128G)-霧金銅&quot;                                                 
+##       describe                                                                                                                  
+##  [1,] &quot;6G/128G湛海藍★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登\xbf&quot; [truncated]      
+##  [2,] &quot;▼每日強檔‧瘋殺特賣▼★送三星24型PLS寬螢幕+一年延長保固★★Samsung Galaxy Note 9 (8G/512G)\\r\\n《限&quot; [truncated]             
+##  [3,] &quot;★送原廠皮套+Office 365+一年延長保★Samsung Galaxy Note 9 (8G/512G)\\r\\n↑10 01-11 30三星官網登錄送\xa6&quot; [truncated]       
+##  [4,] &quot;6G/128G薰衣紫★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登\xbf&quot; [truncated]      
+##  [5,] &quot;6G/128G霧金銅★送Office 365+一年延長保固Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登\xbf&quot; [truncated]      
+##  [6,] &quot;6G/128G湛海藍★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄\xb0&quot; [truncated]      
+##  [7,] &quot;★送配件購物金$2000+一年延長保固 ★(全新福利品) 贈原廠行電  SAMSUNG Galaxy Note 9 6G/128G 6.4吋八核&quot; [truncated]           
+##  [8,] &quot;6G/128G薰衣紫★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄\xb0&quot; [truncated]      
+##  [9,] &quot;黑色沙漠版★送Office 365+遊戲特製背蓋+超值虛寶★送一年延長保固Samsung Galaxy Note 9 (6G/128G)(黑色\xa8&quot; [truncated]        
+## [10,] &quot;6G/128G湛海藍★送原廠無線充電盤+一年延長保Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網\xb5&quot; [truncated]      
+## [11,] &quot;Samsung 三星 Galaxy Note 9 吸震緩衝防摔透明背蓋手機殼 ATO 防花PC透明背蓋 + TPU防撞邊框 手機殼\\r\\n二&quot; [truncated]       
+## [12,] &quot;★【贈9H玻璃貼+防摔空壓殼】★Samsung Galaxy Note 9 (6G/128G)\\r\\n●6.4吋無邊際全螢幕 \r\n●f1.5+f2.4日&quot; [truncated]         
+## [13,] &quot;SAMSUNG Galaxy Note 9全透視感應皮套(立架式)-藍\\r\\n不須打開皮套即可接聽電話、查看通知\r\n三種角度隨心\xc5&quot; [truncated]  
+## [14,] &quot;★Note9 韓國原廠指定防摔首選第一保護殼★VRS 韓國銷售第一選擇\\r\\nnote9 韓國原廠指定防摔首選第一保護\xb4&quot; [truncated]      
+## [15,] &quot;㊣犀牛盾◆黑色犀牛盾 SolidSuit 碳纖維防摔背蓋手機殼Note 9 黑色\\r\\n經典鉅獻\r\nsolidsuit防摔殼為手機殼&quot; [truncated]      
+## [16,] &quot;★送三星24型PLS寬螢幕+Office 365+一年延長保★Samsung Galaxy Note 9 (8G/512G)\\r\\n↑10 01-11 30三星官&quot; [truncated]          
+## [17,] &quot;代理商公司貨Samsung Galaxy Note9 原廠全透視感應皮套(立架式)\\r\\n＊原廠高品質\r\n＊與 note9 完美結合\r\n\xa1&quot; [truncated]
+## [18,] &quot;ESR億色 Samsung Galaxy Note 9手機殼 全包邊玻璃防摔手機殼 冰晶琉璃系列\\r\\n※適用於galaxy note 9手機 &quot; [truncated]        
+## [19,] &quot;SAMSUNG Galaxy Note9全透視感應皮套(立架式)-紫\\r\\n不須打開皮套即可接聽電話、查看通知\r\n三種角度隨心變&quot; [truncated]     
+## [20,] &quot;6G/128G霧金銅★搭配原廠皮套+Office 365Samsung Galaxy Note 9 (6G/128G)\\r\\n↑10 01-11 30三星官網登錄\xb0&quot; [truncated]      
 ##       price originPrice author brand publishDate sellerId isPChome isNC17
 ##  [1,] 29900 29900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-##  [2,] 39400 39400       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-##  [3,] 38900 38900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+##  [2,] 38900 38900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+##  [3,] 39400 39400       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
 ##  [4,] 29900 29900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
 ##  [5,] 29900 29900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-##  [6,] 29900 29900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-##  [7,] 30400 30400       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-##  [8,] 31500 31500       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-##  [9,] 31500 31500       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [10,] 28590 28590       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [11,] 38900 38900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [12,] 888   888         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [13,] 890   890         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [14,] 490   490         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [15,] 590   590         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [16,] 1890  1890        &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [17,] 590   590         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [18,] 830   830         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [19,] 31500 31500       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
-## [20,] 580   580         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+##  [6,] 30900 30900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+##  [7,] 29900 29900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+##  [8,] 30900 30900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+##  [9,] 30400 30400       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [10,] 29900 29900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [11,] 590   590         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [12,] 28590 28590       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [13,] 1890  1890        &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [14,] 890   890         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [15,] 830   830         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [16,] 39900 39900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [17,] 1890  1890        &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [18,] 590   590         &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [19,] 1890  1890        &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
+## [20,] 30900 30900       &quot;&quot;     &quot;&quot;    &quot;&quot;          &quot;&quot;       1        0     
 ##       couponActid BU  
-##  [1,] List,0      &quot;ec&quot;
-##  [2,] List,0      &quot;ec&quot;
-##  [3,] List,0      &quot;ec&quot;
-##  [4,] List,0      &quot;ec&quot;
-##  [5,] List,0      &quot;ec&quot;
-##  [6,] List,0      &quot;ec&quot;
+##  [1,] List,1      &quot;ec&quot;
+##  [2,] List,1      &quot;ec&quot;
+##  [3,] List,1      &quot;ec&quot;
+##  [4,] List,1      &quot;ec&quot;
+##  [5,] List,1      &quot;ec&quot;
+##  [6,] List,1      &quot;ec&quot;
 ##  [7,] List,0      &quot;ec&quot;
-##  [8,] List,0      &quot;ec&quot;
-##  [9,] List,0      &quot;ec&quot;
-## [10,] List,0      &quot;ec&quot;
+##  [8,] List,1      &quot;ec&quot;
+##  [9,] List,1      &quot;ec&quot;
+## [10,] List,1      &quot;ec&quot;
 ## [11,] List,0      &quot;ec&quot;
 ## [12,] List,0      &quot;ec&quot;
 ## [13,] List,0      &quot;ec&quot;
@@ -1325,13 +1345,12 @@ res_json</code></pre>
 ## [17,] List,0      &quot;ec&quot;
 ## [18,] List,0      &quot;ec&quot;
 ## [19,] List,0      &quot;ec&quot;
-## [20,] List,0      &quot;ec&quot;</code></pre>
+## [20,] List,1      &quot;ec&quot;</code></pre>
 <pre class="r"><code>View(data.frame(do.call(rbind,res_json$prods)))</code></pre>
 <pre class="r"><code>#TEST
 
 library(rvest)
 page.source&lt;-read_html(&quot;https://en.wikipedia.org/wiki/R_(programming_language)&quot;)
-##使用html_nodes函數，配合css選擇器將指定的資料取出
 version.block&lt;- html_nodes(page.source, &quot;th:nth-child(2) , .wikitable th+ td , .wikitable th:nth-child(1)&quot;)
 head(version.block)</code></pre>
 <pre><code>## {xml_nodeset (6)}
@@ -1341,8 +1360,7 @@ head(version.block)</code></pre>
 ## [4] &lt;td&gt;\n&lt;/td&gt;
 ## [5] &lt;th&gt;0.49\n&lt;/th&gt;
 ## [6] &lt;td style=&quot;white-space:nowrap;&quot;&gt;1997-04-23\n&lt;/td&gt;</code></pre>
-<pre class="r"><code>##可使用htm_text將html程式碼中的文字資料取出來
-content&lt;- html_text(version.block)
+<pre class="r"><code>content&lt;- html_text(version.block)
 head(content)</code></pre>
 <pre><code>## [1] &quot;Release\n&quot;    &quot;Date\n&quot;       &quot;0.16\n&quot;       &quot;\n&quot;          
 ## [5] &quot;0.49\n&quot;       &quot;1997-04-23\n&quot;</code></pre>
@@ -1355,16 +1373,13 @@ head(content)</code></pre>
 ## [21] &quot;2.13\n&quot;       &quot;2011-04-14\n&quot; &quot;2.14\n&quot;       &quot;2011-10-31\n&quot;
 ## [25] &quot;2.15\n&quot;       &quot;2012-03-30\n&quot; &quot;3.0\n&quot;        &quot;2013-04-03\n&quot;
 ## [29] &quot;3.4\n&quot;        &quot;2017-04-21\n&quot; &quot;3.5\n&quot;        &quot;2018-04-23\n&quot;</code></pre>
-<pre class="r"><code>##html_nodes 支援xpath的指定方式
-###找出所有連結的網址(意味不明)
-version.block2&lt;-html_node(page.source, xpath='//table[@class=&quot;wikitable&quot;]//tr//th')
-#html_name可以列出所有html元素標籤
+<pre class="r"><code>version.block2&lt;-html_node(page.source, xpath='//table[@class=&quot;wikitable&quot;]//tr//th')
+
 html_name(version.block)</code></pre>
 <pre><code>##  [1] &quot;th&quot; &quot;th&quot; &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot;
 ## [15] &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot;
 ## [29] &quot;th&quot; &quot;td&quot; &quot;th&quot; &quot;td&quot;</code></pre>
-<pre class="r"><code>#html_attrs可以列出每個html元素的所有屬性
-el.attrs&lt;-html_attrs(version.block)</code></pre>
+<pre class="r"><code>el.attrs&lt;-html_attrs(version.block)</code></pre>
 </div>
 
 
