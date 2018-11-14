@@ -1,14 +1,3 @@
-#openapi/r crawler
-install.packages("rJava")
-install.packages("Rwordseg", repos="http://R-Forge.R-project.org")
-install.packages("tm")
-install.packages("tmcn", repos="http://R-Forge.R-project.org", type="source")
-install.packages("wordcloud")
-install.packages("XML")
-install.packages("RCurl")
-install.packages("bitops")
-install.packages("jsonlite")
-#library packages
 library(rvest)
 library(XML)
 library(xml2)
@@ -16,9 +5,12 @@ library(bitops)
 library(RCurl)
 library(httr)
 
+#get HTML
 
-#get HTML/ only one page
-jong.html <-paste("https://www.ptt.cc/bbs/LeeJongSuk/index58.html")
+for(page in 1:106){
+  
+}
+web.html <-paste("https://www.ptt.cc/bbs/LeeJongSuk/index58.html")
 jong.title <- html_nodes(read_html(jong.html),".title a" )
 jong.title
 jong.hrefs <- html_attr(jong.title, 'href')
@@ -36,7 +28,6 @@ for(i in 1:length(jong.hrefs)){
   article <- html_nodes(read_html(article.url), "#main-content")
   article.content <- html_text(article)
   
-  
   article.utf8 <- iconv(article.content, 'utf8')
   # vector start counting from 1!!
   jong.article.data <- c(jong.article.data, article.utf8)
@@ -49,14 +40,9 @@ str(article.utf8)
 str(jong.article.data)
 
 #斷詞
-install.packages("jiebaR")
-install.packages("jiebaRD")
 library("jiebaRD")
 library("jiebaR")
 library(tm)
-library(tmcn)
-
-d.corpus <- tm_map(d.corpus, removeNumbers)
 
 Sys.setlocale(category = "LC_ALL", locale = "cht")
 cc <- worker()
@@ -77,13 +63,5 @@ jong<-jong[order(jong$Freq,decreasing = T),]
 head(jong)
 
 #get a wordcloud
-install.packages("wordcloud2")
 library(wordcloud2)
 wordcloud2(jong)
-
-#
-library(Rwordseg)
-library(tm)
-jong <- tm_map(jong, removePunctuation)
-
-wed34r3f
