@@ -6,10 +6,7 @@
 #
 #    http://shiny.rstudio.com/
 #
-install.packages("jiebaR")
-install.packages("wordcloud")
-install.packages("showtext")
-install.packages("ggplot2")
+library(shiny)
 library(jiebaR)
 library(wordcloud)
 library(showtext)

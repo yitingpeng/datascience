@@ -66,22 +66,22 @@ library(ggplot2)
 利用下載下來的網頁，開始擷取擷點，並利用擷點蒐集標題名稱、網址、和撰寫日期。
 
 ```{r}
-##get tiltle, date 
+#get tiltle, date 
 url<-c()
 titledate<-c()
 titletext<-c()
 for(page in 1:106){
-  web.html <-paste("drama",page,".html",sep="")
-  web.nodes <- html_nodes(read_html(web.html),"h2 a" )
-  title<-html_text(web.nodes)
-  titletext<-c(titletext, title)
-  href<-html_attr(web.nodes, 'href')
-  url<-c(url,paste("https://www.koreastardaily.com",href, sep=""))
-  web.date<- html_nodes(read_html(web.html),"h3")
-  date<-html_text(web.date)
-  date<-substring(date,1,23)
-  titledate<-c(titledate,date)
-  Sys.sleep(runif(1,2,5))
+ web.html <-paste("drama",page,".html",sep="")
+web.nodes <- html_nodes(read_html(web.html),"h2 a" )
+ title<-html_text(web.nodes)
+ titletext<-c(titletext, title)
+href<-html_attr(web.nodes, 'href')
+ url<-c(url,paste("https://www.koreastardaily.com",href, sep=""))
+ web.date<- html_nodes(read_html(web.html),"h3")
+ date<-html_text(web.date)
+ date<-substring(date,1,23)
+ titledate<-c(titledate,date)
+Sys.sleep(runif(1,2,5))
 }
 article<-data.frame(url,titledate,titletext)
 
@@ -95,15 +95,15 @@ article<-data.frame(url,titledate,titletext)
 # drag the aticle content
 articletext <- c()
 for(i in 1:length(url)){
- articleurl <- url
+  articleurl <- url
  article <- html_nodes(read_html(articleurl[i]), "p")
  article.content <- html_text(article)
  article.content
  article.utf8 <- iconv(article.content, 'utf8')
- # vector start counting from 1!!
+  #vector start counting from 1!!
  articletext <- c(articletext, article.utf8)
-  # Suspend execution of R expressions for a specified time interval.
- Sys.sleep(sample(3:5, 1))
+  #Suspend execution of R expressions for a specified time interval.
+  Sys.sleep(sample(3:5, 1))
 }
 articletext<-as.data.frame(articletext)
 articletext2<-as.String(articletext)
@@ -146,7 +146,7 @@ head(drama)
 
 最後進行文字雲(包括韓劇以及演員)的繪製。
 
-```{r wordcloud}
+```{r wordcloud2}
 wordcloud2(drama,size=1,gridSize = 0, 
            fontFamily = '微軟正黑體', fontWeight = 'bold',
            color = 'random-light', backgroundColor = "white",
