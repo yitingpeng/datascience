@@ -1,3 +1,15 @@
+---
+title: "price distribution"
+author: "Peng Yi Ting"
+date: "2018年12月5日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
 Sys.setlocale(category = "LC_ALL", locale ="ENGLISH")
 #read the data from steamspy
 steamdata<-c()
@@ -15,6 +27,10 @@ library(Hmisc)
 describe(steamdata$Price) 
 # n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles 
 # 5 lowest and 5 highest scores
+#gmd (Gini's mean difference) :measure of dispersion that is the mean absolute difference btw any pairs of observations.
+#info: relative information:measure the continunity of data.
+#https://cran.r-project.org/web/packages/Hmisc/Hmisc.pdf
+
 
 library(ggplot2)
 #raw data
@@ -42,3 +58,6 @@ q_c<-ggplot(steamdata_c,aes(x=steamdata_c$Price))+
   geom_histogram(fill = "steelblue2", color="black",binwidth = 5)+
   labs(x = "Sale Price($)")
 q_c
+
+```
+
